@@ -54,7 +54,7 @@ With memory, the agent correctly recognized the tasks from session 1, and ignore
 
 The memoryless baseline was given the same question but did not have access to decisions.md or the earlier conversation. It answered: “I can’t determine that from the files available in the current directory.” Therefore, it recalled 0/3 decisions.
 
-This section therefore shows that the agent 
+This section therefore shows that the agent's memory means a set of instructions can be used across different sessions. 
 
 ## What remains unknown
 *List any open questions, unexpected anomalies, or unresolved issues from your runs.*
