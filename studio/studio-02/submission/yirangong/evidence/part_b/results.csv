@@ -1,0 +1,31 @@
+bucket,id,condition,n_chunks,correct,raw_answer,target,total_tokens,peak_context_tokens,cost_usd,part_a_correct,part_a_real_input_tokens,part_a_cost_usd
+256k,1,isolate,3,True,garden,garden,246934,82483,0.049667,False,244379,0.049172
+256k,1,summary,3,False,NOT FOUND,garden,247852,82497,0.050335,False,244379,0.049172
+256k,2,isolate,3,False,bathroom,bedroom,249731,83029,0.050316,False,247077,0.049627
+256k,2,summary,3,False,NOT FOUND,bedroom,250648,83043,0.036047,False,247077,0.049627
+256k,3,isolate,2,True,kitchen,kitchen,231066,116111,0.046236,True,229347,0.04605
+256k,3,summary,2,False,NOT FOUND,kitchen,231890,116125,0.0469,True,229347,0.04605
+256k,4,isolate,3,True,hallway,hallway,242593,81226,0.048718,True,240131,0.048277
+256k,4,summary,3,False,NOT FOUND,hallway,243710,81240,0.049538,True,240131,0.048277
+256k,5,isolate,3,True,bathroom,bathroom,248379,82680,0.049767,True,246051,0.049353
+256k,5,summary,3,True,bathroom,bathroom,249458,82694,0.050528,True,246051,0.049353
+512k,1,isolate,5,True,garden,garden,489983,98299,0.098434,False,486168,0.195158
+512k,1,summary,5,False,bathroom,garden,491473,98313,0.099485,False,486168,0.195158
+512k,2,isolate,5,False,bathroom,bedroom,493043,99975,0.09921,False,489090,0.196055
+512k,2,summary,5,False,NOT FOUND,bedroom,494493,99989,0.082633,False,489090,0.196055
+512k,3,isolate,5,True,kitchen,kitchen,481944,96497,0.09648,True,478527,0.191693
+512k,3,summary,5,True,kitchen,kitchen,484287,96511,0.09827,True,478527,0.191693
+512k,4,isolate,5,True,hallway,hallway,489305,98939,0.098207,True,485595,0.194621
+512k,4,summary,5,False,NOT FOUND,hallway,490945,98953,0.081921,True,485595,0.194621
+512k,5,isolate,5,False,NOT FOUND,bathroom,483478,97479,0.096921,True,479932,0.192345
+512k,5,summary,5,False,NOT FOUND,bathroom,485607,97493,0.098482,True,479932,0.192345
+768k,1,isolate,8,True,kitchen,kitchen,771236,98188,0.154387,True,766147,0.306822
+768k,1,summary,8,True,kitchen,kitchen,774586,98202,0.156896,True,766147,0.306822
+768k,2,isolate,8,False,New York,garden,771413,98515,0.155048,False,765599,0.30702
+768k,2,summary,8,False,NOT FOUND,garden,773971,98529,0.122024,False,765599,0.30702
+768k,3,isolate,8,True,hallway,hallway,771375,98280,0.154774,False,765902,0.307154
+768k,3,summary,8,False,NOT FOUND,hallway,774546,98294,0.157069,False,765902,0.307154
+768k,4,isolate,8,True,bedroom,bedroom,772426,97559,0.155132,True,766795,0.307196
+768k,4,summary,8,True,bedroom,bedroom,775308,97573,0.157112,True,766795,0.307196
+768k,5,isolate,8,True,bathroom,bathroom,770594,98806,0.154498,True,765254,0.306535
+768k,5,summary,8,False,NOT FOUND,bathroom,773663,98820,0.156707,True,765254,0.306535

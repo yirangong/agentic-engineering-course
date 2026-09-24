@@ -1,0 +1,108 @@
+{
+  "model": "openai-codex/gpt-5.6-luna",
+  "agents_md_source": "part_c/AGENTS.md",
+  "session1": {
+    "ok": true,
+    "error": null,
+    "usage": {
+      "input": 3544,
+      "output": 54,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 3598,
+      "cost": {
+        "input": 0.0007088000000000001,
+        "output": 6.48e-05,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.0007736000000000002
+      }
+    },
+    "cost_usd": 0.002407,
+    "retried": false,
+    "decisions_md_created": true,
+    "dated_entries": 3,
+    "missing_after_retry": []
+  },
+  "session2": {
+    "ok": true,
+    "error": null,
+    "usage": {
+      "input": 1279,
+      "output": 36,
+      "cacheRead": 2560,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 3875,
+      "cost": {
+        "input": 0.00025580000000000004,
+        "output": 4.32e-05,
+        "cacheRead": 5.12e-05,
+        "cacheWrite": 0,
+        "total": 0.00035020000000000006
+      }
+    },
+    "cost_usd": 0.001756,
+    "fib_py_created": true,
+    "dated_entries_after": 4
+  },
+  "session3_with_memory": {
+    "ok": true,
+    "error": null,
+    "usage": {
+      "input": 2814,
+      "output": 75,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 2889,
+      "cost": {
+        "input": 0.0005628,
+        "output": 8.999999999999999e-05,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.0006528
+      }
+    },
+    "cost_usd": 0.001223,
+    "answer_text": "In session 1, we decided that the note-taking tool would:\n\n- Store notes as JSONL\u2014one JSON object per line\u2014for easy appending, inspection, and parsing.\n- Use the command name `note` because it\u2019s short and clear.\n- Record dates as ISO 8601 (`YYYY-MM-DD`) for unambiguous chronological sorting.",
+    "recall": {
+      "storage_format": "correct",
+      "command_name": "correct",
+      "date_format": "correct"
+    }
+  },
+  "session3_no_memory_baseline": {
+    "ok": true,
+    "error": null,
+    "usage": {
+      "input": 3506,
+      "output": 18,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 3524,
+      "cost": {
+        "input": 0.0007012,
+        "output": 2.16e-05,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.0007228
+      }
+    },
+    "cost_usd": 0.002556,
+    "answer_text": "I can\u2019t determine that from the files available in the current directory.",
+    "recall": {
+      "storage_format": "missing",
+      "command_name": "missing",
+      "date_format": "missing"
+    }
+  },
+  "ground_truth_blocks": {
+    "storage_format": "- 2026-09-24 \u2014 Storage format: Store notes as JSON Lines (JSONL), one JSON object per note, because it is append-friendly while remaining easy to inspect and parse.\n- 2026-09-24 \u2014 Command name: Use `note`, because it is short, memorable, and clearly communicates the tool\u2019s purpose.\n- 2026-09-24 \u2014 Date format: Record each note\u2019s date in ISO 8601 format (`YYYY-MM-DD`), because it is unambiguous and sorts chronologically.\n- 2026-09-24 \u2014 Fibonacci implementation: Start the sequence at 0 and generate it iteratively, because this produces the conventional first 20 terms with simple constant-space logic.",
+    "command_name": "- 2026-09-24 \u2014 Storage format: Store notes as JSON Lines (JSONL), one JSON object per note, because it is append-friendly while remaining easy to inspect and parse.\n- 2026-09-24 \u2014 Command name: Use `note`, because it is short, memorable, and clearly communicates the tool\u2019s purpose.\n- 2026-09-24 \u2014 Date format: Record each note\u2019s date in ISO 8601 format (`YYYY-MM-DD`), because it is unambiguous and sorts chronologically.\n- 2026-09-24 \u2014 Fibonacci implementation: Start the sequence at 0 and generate it iteratively, because this produces the conventional first 20 terms with simple constant-space logic.",
+    "date_format": "- 2026-09-24 \u2014 Storage format: Store notes as JSON Lines (JSONL), one JSON object per note, because it is append-friendly while remaining easy to inspect and parse.\n- 2026-09-24 \u2014 Command name: Use `note`, because it is short, memorable, and clearly communicates the tool\u2019s purpose.\n- 2026-09-24 \u2014 Date format: Record each note\u2019s date in ISO 8601 format (`YYYY-MM-DD`), because it is unambiguous and sorts chronologically.\n- 2026-09-24 \u2014 Fibonacci implementation: Start the sequence at 0 and generate it iteratively, because this produces the conventional first 20 terms with simple constant-space logic."
+  },
+  "total_cost_usd": 0.007942
+}

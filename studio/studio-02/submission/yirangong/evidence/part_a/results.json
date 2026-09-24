@@ -1,0 +1,467 @@
+[
+  {
+    "bucket": "256k",
+    "id": 1,
+    "person": "Mary",
+    "target": "garden",
+    "question": "Where is Mary?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "office",
+    "correct": false,
+    "real_input_tokens": 244379,
+    "usage": {
+      "input": 245058,
+      "output": 134,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 127,
+      "totalTokens": 245192,
+      "cost": {
+        "input": 0.0490116,
+        "output": 0.0001608,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.049172400000000005
+      }
+    },
+    "cost_usd": 0.049172,
+    "wall_time_s": 9.33,
+    "answer_text": "office"
+  },
+  {
+    "bucket": "256k",
+    "id": 2,
+    "person": "John",
+    "target": "bedroom",
+    "question": "Where is John?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "bathroom",
+    "correct": false,
+    "real_input_tokens": 247077,
+    "usage": {
+      "input": 247756,
+      "output": 63,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 55,
+      "totalTokens": 247819,
+      "cost": {
+        "input": 0.049551200000000004,
+        "output": 7.56e-05,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.049626800000000006
+      }
+    },
+    "cost_usd": 0.049627,
+    "wall_time_s": 7.1,
+    "answer_text": "bathroom"
+  },
+  {
+    "bucket": "256k",
+    "id": 3,
+    "person": "Sandra",
+    "target": "kitchen",
+    "question": "Where is Sandra?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "kitchen",
+    "correct": true,
+    "real_input_tokens": 229347,
+    "usage": {
+      "input": 230026,
+      "output": 37,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 29,
+      "totalTokens": 230063,
+      "cost": {
+        "input": 0.0460052,
+        "output": 4.4399999999999995e-05,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.0460496
+      }
+    },
+    "cost_usd": 0.04605,
+    "wall_time_s": 8.32,
+    "answer_text": "kitchen"
+  },
+  {
+    "bucket": "256k",
+    "id": 4,
+    "person": "Daniel",
+    "target": "hallway",
+    "question": "Where is Daniel?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "hallway",
+    "correct": true,
+    "real_input_tokens": 240131,
+    "usage": {
+      "input": 240810,
+      "output": 96,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 88,
+      "totalTokens": 240906,
+      "cost": {
+        "input": 0.048162,
+        "output": 0.0001152,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.048277200000000006
+      }
+    },
+    "cost_usd": 0.048277,
+    "wall_time_s": 9.17,
+    "answer_text": "hallway"
+  },
+  {
+    "bucket": "256k",
+    "id": 5,
+    "person": "Daniel",
+    "target": "bathroom",
+    "question": "Where is Daniel?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "bathroom",
+    "correct": true,
+    "real_input_tokens": 246051,
+    "usage": {
+      "input": 246730,
+      "output": 6,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 246736,
+      "cost": {
+        "input": 0.049346,
+        "output": 7.2e-06,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.0493532
+      }
+    },
+    "cost_usd": 0.049353,
+    "wall_time_s": 6.41,
+    "answer_text": "bathroom"
+  },
+  {
+    "bucket": "512k",
+    "id": 1,
+    "person": "Mary",
+    "target": "garden",
+    "question": "Where is Mary?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "kitchen",
+    "correct": false,
+    "real_input_tokens": 486168,
+    "usage": {
+      "input": 486847,
+      "output": 233,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 225,
+      "totalTokens": 487080,
+      "cost": {
+        "input": 0.19473880000000002,
+        "output": 0.00041940000000000006,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.1951582
+      }
+    },
+    "cost_usd": 0.195158,
+    "wall_time_s": 13.48,
+    "answer_text": "kitchen"
+  },
+  {
+    "bucket": "512k",
+    "id": 2,
+    "person": "John",
+    "target": "bedroom",
+    "question": "Where is John?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "bathroom",
+    "correct": false,
+    "real_input_tokens": 489090,
+    "usage": {
+      "input": 489768,
+      "output": 82,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 74,
+      "totalTokens": 489850,
+      "cost": {
+        "input": 0.1959072,
+        "output": 0.0001476,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.1960548
+      }
+    },
+    "cost_usd": 0.196055,
+    "wall_time_s": 11.56,
+    "answer_text": "bathroom"
+  },
+  {
+    "bucket": "512k",
+    "id": 3,
+    "person": "Sandra",
+    "target": "kitchen",
+    "question": "Where is Sandra?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "kitchen",
+    "correct": true,
+    "real_input_tokens": 478527,
+    "usage": {
+      "input": 479206,
+      "output": 6,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 479212,
+      "cost": {
+        "input": 0.19168240000000003,
+        "output": 1.0800000000000002e-05,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.19169320000000004
+      }
+    },
+    "cost_usd": 0.191693,
+    "wall_time_s": 8.82,
+    "answer_text": "kitchen"
+  },
+  {
+    "bucket": "512k",
+    "id": 4,
+    "person": "Daniel",
+    "target": "hallway",
+    "question": "Where is Daniel?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "hallway",
+    "correct": true,
+    "real_input_tokens": 485595,
+    "usage": {
+      "input": 486274,
+      "output": 62,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 54,
+      "totalTokens": 486336,
+      "cost": {
+        "input": 0.1945096,
+        "output": 0.0001116,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.1946212
+      }
+    },
+    "cost_usd": 0.194621,
+    "wall_time_s": 10.76,
+    "answer_text": "hallway"
+  },
+  {
+    "bucket": "512k",
+    "id": 5,
+    "person": "Daniel",
+    "target": "bathroom",
+    "question": "Where is Daniel?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "bathroom",
+    "correct": true,
+    "real_input_tokens": 479932,
+    "usage": {
+      "input": 480611,
+      "output": 56,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 48,
+      "totalTokens": 480667,
+      "cost": {
+        "input": 0.1922444,
+        "output": 0.00010080000000000001,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.19234520000000002
+      }
+    },
+    "cost_usd": 0.192345,
+    "wall_time_s": 11.68,
+    "answer_text": "bathroom"
+  },
+  {
+    "bucket": "768k",
+    "id": 1,
+    "person": "Sandra",
+    "target": "kitchen",
+    "question": "Where is Sandra?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "kitchen",
+    "correct": true,
+    "real_input_tokens": 766147,
+    "usage": {
+      "input": 766825,
+      "output": 51,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 43,
+      "totalTokens": 766876,
+      "cost": {
+        "input": 0.30673,
+        "output": 9.180000000000001e-05,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.3068218
+      }
+    },
+    "cost_usd": 0.306822,
+    "wall_time_s": 15.62,
+    "answer_text": "kitchen"
+  },
+  {
+    "bucket": "768k",
+    "id": 2,
+    "person": "Daniel",
+    "target": "garden",
+    "question": "Where is Daniel?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "New York",
+    "correct": false,
+    "real_input_tokens": 765599,
+    "usage": {
+      "input": 766277,
+      "output": 283,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 275,
+      "totalTokens": 766560,
+      "cost": {
+        "input": 0.3065108,
+        "output": 0.0005094,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.3070202
+      }
+    },
+    "cost_usd": 0.30702,
+    "wall_time_s": 16.49,
+    "answer_text": "New York"
+  },
+  {
+    "bucket": "768k",
+    "id": 3,
+    "person": "Mary",
+    "target": "hallway",
+    "question": "Where is Mary?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "London",
+    "correct": false,
+    "real_input_tokens": 765902,
+    "usage": {
+      "input": 766580,
+      "output": 290,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 283,
+      "totalTokens": 766870,
+      "cost": {
+        "input": 0.306632,
+        "output": 0.000522,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.30715400000000004
+      }
+    },
+    "cost_usd": 0.307154,
+    "wall_time_s": 18.75,
+    "answer_text": "London"
+  },
+  {
+    "bucket": "768k",
+    "id": 4,
+    "person": "John",
+    "target": "bedroom",
+    "question": "Where is John?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "bedroom",
+    "correct": true,
+    "real_input_tokens": 766795,
+    "usage": {
+      "input": 767473,
+      "output": 115,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 107,
+      "totalTokens": 767588,
+      "cost": {
+        "input": 0.3069892,
+        "output": 0.00020700000000000002,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.30719620000000003
+      }
+    },
+    "cost_usd": 0.307196,
+    "wall_time_s": 18.1,
+    "answer_text": "bedroom"
+  },
+  {
+    "bucket": "768k",
+    "id": 5,
+    "person": "Sandra",
+    "target": "bathroom",
+    "question": "Where is Sandra?",
+    "model": "openai-codex/gpt-5.6-luna",
+    "ok": true,
+    "error": null,
+    "raw_answer": "bathroom",
+    "correct": true,
+    "real_input_tokens": 765254,
+    "usage": {
+      "input": 765932,
+      "output": 90,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 82,
+      "totalTokens": 766022,
+      "cost": {
+        "input": 0.3063728,
+        "output": 0.000162,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.3065348
+      }
+    },
+    "cost_usd": 0.306535,
+    "wall_time_s": 12.33,
+    "answer_text": "bathroom"
+  }
+]

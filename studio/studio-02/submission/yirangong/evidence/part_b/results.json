@@ -1,0 +1,2296 @@
+{
+  "model": "openai-codex/gpt-5.6-luna",
+  "thinking": "low",
+  "buckets": [
+    "256k",
+    "512k",
+    "768k"
+  ],
+  "chunk_target_tokens": 96000,
+  "data_check": {
+    "n_items_checked": 15,
+    "n_single_mention": 8,
+    "n_multi_mention": 7,
+    "n_zero_regex_hits": 0,
+    "mention_count_distribution": {
+      "1": 8,
+      "2": 2,
+      "4": 2,
+      "5": 2,
+      "6": 1
+    },
+    "n_cases_where_last_mention_disagrees_with_target": 0,
+    "finding": "7/15 items have the target person moving MORE THAN ONCE (regex hits for 'PERSON moved/went/travelled/... (back) to the ROOM'); 8 have exactly one mention, 0 had no literal regex hit. Across the 15 items with at least one hit, the LAST mention's room matches the gold target in 15/15 cases -- when a person moves more than once, the most recent move is usually the right answer. Every demonstration below is therefore told explicitly to take the LAST reported location, never the first."
+  },
+  "items": [
+    {
+      "bucket": "256k",
+      "id": 1,
+      "condition": "isolate",
+      "person": "Mary",
+      "target": "garden",
+      "n_chunks": 3,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "Mary went back to the bedroom.",
+          "input_tokens": 81749,
+          "output_tokens": 48,
+          "cost_usd": 0.016407
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "Mary went to the garden.",
+          "input_tokens": 81752,
+          "output_tokens": 42,
+          "cost_usd": 0.016401
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "\"Watt to a widow, Mary Powell, in New York (1803), at the time when he was lecturing in the Temple of Reason (Snow's Rooms, Broadway).\"",
+          "input_tokens": 82483,
+          "output_tokens": 185,
+          "cost_usd": 0.016719
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "garden",
+        "raw_answer": "garden",
+        "correct": true,
+        "input_tokens": 670,
+        "output_tokens": 5,
+        "cost_usd": 0.00014
+      },
+      "correct": true,
+      "raw_answer": "garden",
+      "total_tokens": 246934,
+      "peak_context_tokens": 82483,
+      "cost_usd": 0.049667,
+      "part_a_correct": false,
+      "part_a_real_input_tokens": 244379,
+      "part_a_cost_usd": 0.049172
+    },
+    {
+      "bucket": "256k",
+      "id": 1,
+      "condition": "summary",
+      "person": "Mary",
+      "target": "garden",
+      "n_chunks": 3,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "Tracy uncovers a conspiracy involving Wendover, Tenney, and Boyce and plans prosecutions. He visits the Minster home, then confronts a hostile mob outside it and disperses them by promising the works will reopen. Jessica Lawton, ill, travels from Thessaly to Tracy\u2019s mother\u2019s farm, steals incriminating papers, and later collapses outside General Boyce\u2019s house; she dies after reconciling Horace and Tracy. The text then recounts Louis XVI\u2019s imprisonment, trial, execution, and the suffering and eventual release of his family. Finally, in Winton, the Shaw sisters and friends form a social club, organize outings, receive gifts, take photographs, and explore the countryside.",
+          "input_tokens": 81763,
+          "output_tokens": 237,
+          "cost_usd": 0.016637
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "Patience secretly drives Bedelia on the Lake road, prompting discipline; afterward, the girls invite Sextoness Jane into their club. At Shirley\u2019s manor party, Uncle Paul arrives unexpectedly, later offering Pauline and Hilary schooling away from home. Jane takes the group to the lakeshore to watch canal boats, and the club ends with a picnic at Port Edward\u2019s old fort.\n\nIn the parallel play, Dean Jedd is imprisoned in the police station\u2019s \u201cStrong-box,\u201d escapes, and returns to the Deanery amid comic misunderstandings. In the treasure narrative, Croyden and Macloud search Greenberry Point, camp there, confront thieves, and abandon the hunt. Elaine visits Hampton, is abducted with Davila, and held in a remote bayside house while ransom demands are made.",
+          "input_tokens": 81766,
+          "output_tokens": 212,
+          "cost_usd": 0.016608
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "Croyden and Macloud ransom abducted Elaine and Davila, with Croyden burying cash at Greenberry Point after traveling from Hampton through Annapolis, then Baltimore, before the women secure release by Elaine\u2019s check. The hidden Parmenter jewels are later found in Ashburton\u2019s cellar. Separately, Jennie lives at Sandwood, moves to Chicago, loses Vesta, and remains emotionally tied to Lester, who dies in Chicago and is buried in Cincinnati. Thomas Paine\u2019s life is traced from England to America, France, New York, New Rochelle, and Greenwich: he advocates reason, liberty, and deism, suffers poverty and persecution, dies peacefully in 1809, and is later disinterred by Cobbett, who carries his bones to England.",
+          "input_tokens": 82497,
+          "output_tokens": 245,
+          "cost_usd": 0.016793
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "NOT FOUND",
+        "raw_answer": "NOT FOUND",
+        "correct": false,
+        "input_tokens": 1061,
+        "output_tokens": 71,
+        "cost_usd": 0.000297
+      },
+      "correct": false,
+      "raw_answer": "NOT FOUND",
+      "total_tokens": 247852,
+      "peak_context_tokens": 82497,
+      "cost_usd": 0.050335,
+      "part_a_correct": false,
+      "part_a_real_input_tokens": 244379,
+      "part_a_cost_usd": 0.049172
+    },
+    {
+      "bucket": "256k",
+      "id": 2,
+      "condition": "isolate",
+      "person": "John",
+      "target": "bedroom",
+      "n_chunks": 3,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "\"John Gudyill led the way to the stone hall, where Lady Margaret was fidgeting about, superintending, arranging, and re-forming the preparations made for the reception of the celebrated Claverhouse...\"",
+          "input_tokens": 82812,
+          "output_tokens": 210,
+          "cost_usd": 0.016814
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "John travelled to the bathroom.",
+          "input_tokens": 82842,
+          "output_tokens": 69,
+          "cost_usd": 0.016651
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "\"John went back to the bathroom.\"",
+          "input_tokens": 83029,
+          "output_tokens": 85,
+          "cost_usd": 0.016708
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "bathroom",
+        "raw_answer": "bathroom",
+        "correct": false,
+        "input_tokens": 678,
+        "output_tokens": 6,
+        "cost_usd": 0.000143
+      },
+      "correct": false,
+      "raw_answer": "bathroom",
+      "total_tokens": 249731,
+      "peak_context_tokens": 83029,
+      "cost_usd": 0.050316,
+      "part_a_correct": false,
+      "part_a_real_input_tokens": 247077,
+      "part_a_cost_usd": 0.049627
+    },
+    {
+      "bucket": "256k",
+      "id": 2,
+      "condition": "summary",
+      "person": "John",
+      "target": "bedroom",
+      "n_chunks": 3,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The author condemns Osteopathy\u2019s exaggerated claims, ineffective \u201clesion\u201d treatments, fraudulent cures, exploitative schools, and urges scientific education and honesty. The narrative then follows Mause and Cuddie, who leave their home and seek service at Milnwood. Soldiers arrive there, arrest Henry Morton for sheltering Burley, and take him to Tillietudlem Tower. Edith secretly visits Morton in a turret closet and sends Goose Gibbie to Major Bellenden. Claverhouse arrives, initially orders Morton\u2019s execution, but Lord Evandale secures his life. At Loudon-hill, the Covenanters defeat Claverhouse\u2019s forces; Morton and Cuddie escape, while Morton saves wounded Evandale. Claverhouse retreats to Tillietudlem, which Major Bellenden prepares to defend.",
+          "input_tokens": 82826,
+          "output_tokens": 257,
+          "cost_usd": 0.016874
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "After Loudon-hill, Morton joins the Covenanters but rejects fanaticism and cruelty. Their army attacks Tillietudlem, defended by Major Bellenden and wounded Lord Evandale; Morton\u2019s leadership helps force a negotiated evacuation. He frees Evandale and escorts the Bellenden family from the Castle. The insurgents then march to Glasgow, are repulsed, and later lose disastrously at Bothwell Bridge. Morton escapes but is captured by Cameronian zealots in a farmhouse, from whom Claverhouse rescues him. At Edinburgh\u2019s Privy Council, Morton accepts exile to Holland, while Macbriar is tortured and executed and Cuddie receives pardon. Years later, Morton\u2014believed drowned\u2014returns secretly to Scotland, travels to Fairy Knowe, and lodges in Lord Evandale\u2019s former bedroom, where Jenny recognizes him as Edith\u2019s former lover.",
+          "input_tokens": 82856,
+          "output_tokens": 247,
+          "cost_usd": 0.016868
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "Henry Morton secretly visits Fairy Knowe, where Edith sees him at a window and breaks off her proposed marriage to Lord Evandale. Morton then travels to Milnwood, visits Ailie Wilson, changes clothes, and goes to Niel Blane\u2019s inn before lodging with blind Bessie Maclure. Guided by Peggy, he reaches Burley\u2019s cave at the Black Linn, learns of a plot against Evandale, and rides to Fairy Knowe for help. Olifant\u2019s party ambushes Evandale; Cuddie shoots Olifant, while Evandale is mortally wounded. Morton arrives with Dutch troops, but Burley flees and drowns. Evandale dies blessing Morton and Edith, who later marry. The remaining essays discuss vanity, bad temper, false self-assessments, plagiarism, excessive writing, and the dangers of degrading serious subjects through ridicule.",
+          "input_tokens": 83043,
+          "output_tokens": 230,
+          "cost_usd": 0.002001
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "NOT FOUND",
+        "raw_answer": "NOT FOUND",
+        "correct": false,
+        "input_tokens": 1123,
+        "output_tokens": 66,
+        "cost_usd": 0.000304
+      },
+      "correct": false,
+      "raw_answer": "NOT FOUND",
+      "total_tokens": 250648,
+      "peak_context_tokens": 83043,
+      "cost_usd": 0.036047,
+      "part_a_correct": false,
+      "part_a_real_input_tokens": 247077,
+      "part_a_cost_usd": 0.049627
+    },
+    {
+      "bucket": "256k",
+      "id": 3,
+      "condition": "isolate",
+      "person": "Sandra",
+      "target": "kitchen",
+      "n_chunks": 2,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "Sandra journeyed to the kitchen.",
+          "input_tokens": 114307,
+          "output_tokens": 11,
+          "cost_usd": 0.022875
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 116111,
+          "output_tokens": 6,
+          "cost_usd": 0.023229
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "kitchen",
+        "raw_answer": "kitchen",
+        "correct": true,
+        "input_tokens": 625,
+        "output_tokens": 6,
+        "cost_usd": 0.000132
+      },
+      "correct": true,
+      "raw_answer": "kitchen",
+      "total_tokens": 231066,
+      "peak_context_tokens": 116111,
+      "cost_usd": 0.046236,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 229347,
+      "part_a_cost_usd": 0.04605
+    },
+    {
+      "bucket": "256k",
+      "id": 3,
+      "condition": "summary",
+      "person": "Sandra",
+      "target": "kitchen",
+      "n_chunks": 2,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines a medical index with a Civil War narrative. The index catalogs diseases, symptoms, pathology, treatments, and page references, especially for liver, pancreatic, intestinal, rectal, stomach, rheumatic, syphilitic, and infectious disorders. The historical section recounts Chancellorsville, where Hooker withdrew to a stronger position, Jackson was wounded by his own troops and taken to Guiney\u2019s Station, and Sedgwick retreated across the Rappahannock. It then describes Grant\u2019s campaigns against Vicksburg and Port Hudson, including river operations, battles, siege warfare, and the eventual Confederate surrenders. Finally, it covers Gettysburg, including Meade\u2019s arrival, Pickett\u2019s charge, and Lee\u2019s retreat, before introducing Chickamauga.",
+          "input_tokens": 114321,
+          "output_tokens": 258,
+          "cost_usd": 0.023174
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "The text surveys major Civil War campaigns: Chickamauga and Chattanooga, Grant\u2019s Wilderness, Spotsylvania, Cold Harbor, Petersburg, Sherman\u2019s Atlanta campaign and march to Savannah, Sheridan\u2019s Shenandoah victories, Nashville, and Appomattox. It emphasizes strategic flanking, entrenched warfare, enormous casualties, Confederate decline, and Union victory. Sherman moved from Atlanta through Georgia to Savannah, then through the Carolinas; Lee retreated from Richmond through Amelia and Sailor\u2019s Creek to Appomattox, where he surrendered to Grant. Later excerpts include a comic household crisis, agricultural advice on raising geese, and a mystery novel: Cyril shelters an unknown woman, discovers Lord Wilmersley murdered at Geralton Castle, investigates Lady Wilmersley\u2019s disappearance, questions servants, and suspects the missing maid Priscilla Prentice may be involved.",
+          "input_tokens": 116125,
+          "output_tokens": 238,
+          "cost_usd": 0.023511
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "NOT FOUND",
+        "raw_answer": "NOT FOUND",
+        "correct": false,
+        "input_tokens": 923,
+        "output_tokens": 25,
+        "cost_usd": 0.000215
+      },
+      "correct": false,
+      "raw_answer": "NOT FOUND",
+      "total_tokens": 231890,
+      "peak_context_tokens": 116125,
+      "cost_usd": 0.0469,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 229347,
+      "part_a_cost_usd": 0.04605
+    },
+    {
+      "bucket": "256k",
+      "id": 4,
+      "condition": "isolate",
+      "person": "Daniel",
+      "target": "hallway",
+      "n_chunks": 3,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "On July 1, 1806, two young English gentlemen, Daniel and William Constable, arrived in New York.",
+          "input_tokens": 80415,
+          "output_tokens": 80,
+          "cost_usd": 0.016179
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "\u201cDr. Daniel journeyed to the hallway.\u201d",
+          "input_tokens": 80096,
+          "output_tokens": 71,
+          "cost_usd": 0.016104
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 81226,
+          "output_tokens": 42,
+          "cost_usd": 0.016296
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "hallway",
+        "raw_answer": "hallway",
+        "correct": true,
+        "input_tokens": 657,
+        "output_tokens": 6,
+        "cost_usd": 0.000139
+      },
+      "correct": true,
+      "raw_answer": "hallway",
+      "total_tokens": 242593,
+      "peak_context_tokens": 81226,
+      "cost_usd": 0.048718,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 240131,
+      "part_a_cost_usd": 0.048277
+    },
+    {
+      "bucket": "256k",
+      "id": 4,
+      "condition": "summary",
+      "person": "Daniel",
+      "target": "hallway",
+      "n_chunks": 3,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The text portrays Thomas Paine\u2019s final years in America: his deist writings, declining health, poverty, political isolation, and conflicts with religious opponents and James Cheetham. He lived with William Carver in New York, later moved to Jarvis, Hitt, Ryder, and finally William Thompson\u2019s house on Grove Street, where he died peacefully on June 8, 1809. Friends defended him against accusations of drunkenness, sexual misconduct, and recantation, largely tracing those slanders to Carver and Cheetham. Paine was buried on his New Rochelle farm after Quakers refused him burial. William Cobbett later exhumed and shipped his bones to England, where they disappeared. Appendices preserve accounts by Madame Bonneville, John Hall, and others concerning Paine\u2019s character, inventions, political career, friendships, and writings.",
+          "input_tokens": 80429,
+          "output_tokens": 245,
+          "cost_usd": 0.01638
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines a celebration of orchards, gardening, flowers, horticultural authors, and historical footnotes with a lengthy 1697 Dutch administrative memoir of Jaffnapatam, covering trade, elephants, taxes, forts, roads, irrigation, slavery, and pearl fisheries. It then shifts to fiction: Eli visits Margit\u2019s home, discovers Arne\u2019s gifts, and later walks with Arne along the road to the parsonage. At Eli and Arne\u2019s wedding in Boeen, Baard and Birgit reconcile. In a South American adventure, Sam, Jimmie, Carl, and Pedro shelter in a temple while Indians surround it; Havens receives coded telegrams at a hotel, Ben travels to the airfield, and the aeroplanes depart south toward Quito and Lake Titicaca.",
+          "input_tokens": 80110,
+          "output_tokens": 255,
+          "cost_usd": 0.016328
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "The Flying Machine Boys escape the besieged temple through secret tunnels, reach the _Ann_, retrieve food and ammunition, and return in time to repel Indians. Later, they fly to the Andes\u2019 mysterious fortress, where Ben and Jimmie enter secretly while Havens and Sam approach separately. Redfern captures Havens and Sam inside, but the boys rescue them; Redfern confesses and is arrested. The \u201cmystery\u201d proves to be electrically lit subterranean machinery.\n\nOther excerpts recount May Kirke\u2019s romance, the Dashahed Zouaves\u2019 camp adventures and patriotic review, Jerry\u2019s wartime story, and Carrie Richards\u2019s Civil War diary. Her entries describe graduation, wartime losses, Lincoln\u2019s assassination, national celebrations, family deaths, marriage, travel to Europe, and eventual family bereavement. A final mystery excerpt follows the inquest into Mr. Leavenworth\u2019s murder, focusing suspicion on Eleanore, whose handkerchief and hidden library key implicate her.",
+          "input_tokens": 81240,
+          "output_tokens": 266,
+          "cost_usd": 0.016567
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "NOT FOUND",
+        "raw_answer": "NOT FOUND",
+        "correct": false,
+        "input_tokens": 1135,
+        "output_tokens": 30,
+        "cost_usd": 0.000263
+      },
+      "correct": false,
+      "raw_answer": "NOT FOUND",
+      "total_tokens": 243710,
+      "peak_context_tokens": 81240,
+      "cost_usd": 0.049538,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 240131,
+      "part_a_cost_usd": 0.048277
+    },
+    {
+      "bucket": "256k",
+      "id": 5,
+      "condition": "isolate",
+      "person": "Daniel",
+      "target": "bathroom",
+      "n_chunks": 3,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "Daniel travelled to the bathroom.",
+          "input_tokens": 82490,
+          "output_tokens": 10,
+          "cost_usd": 0.01651
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 82487,
+          "output_tokens": 32,
+          "cost_usd": 0.016536
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 82680,
+          "output_tokens": 43,
+          "cost_usd": 0.016588
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "bathroom",
+        "raw_answer": "bathroom",
+        "correct": true,
+        "input_tokens": 631,
+        "output_tokens": 6,
+        "cost_usd": 0.000133
+      },
+      "correct": true,
+      "raw_answer": "bathroom",
+      "total_tokens": 248379,
+      "peak_context_tokens": 82680,
+      "cost_usd": 0.049767,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 246051,
+      "part_a_cost_usd": 0.049353
+    },
+    {
+      "bucket": "256k",
+      "id": 5,
+      "condition": "summary",
+      "person": "Daniel",
+      "target": "bathroom",
+      "n_chunks": 3,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The text reviews intestinal obstruction, especially intussusception, constipation, fecal impaction, strictures, tumors, adhesions, volvulus, and cancer. Acute obstruction causes sudden colicky pain, vomiting, distension, tenderness, collapse, and possible gangrene; chronic obstruction develops gradually with constipation, alternating diarrhea, wasting, and eventual occlusion. Diagnosis relies on history, palpation, rectal examination, and identifying tumors or fecal masses. Treatment emphasizes avoiding harmful purgatives, controlling pain and peristalsis, supportive care, enemas in selected cases, and timely surgery for mechanical obstruction. It also discusses rectal diseases, hemorrhoids, fissures, ulcers, abscesses, fistulas, prolapse, parasites, and their historical treatments. Sandra travelled to the kitchen. Daniel travelled to the bathroom.",
+          "input_tokens": 82504,
+          "output_tokens": 197,
+          "cost_usd": 0.016737
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "The text discusses intestinal and tissue nematodes, including threadworms, hookworms, trichinae, Guinea-worm, and filariae, describing their anatomy, transmission, symptoms, complications, prevention, and historical treatments. It then surveys liver disorders: biliousness, lithaemia, hepatic glycosuria, jaundice, congestion, perihepatitis, cirrhosis, hepatic abscess, acute yellow atrophy, phosphorus poisoning, cancer, amyloid and fatty liver, and bile-duct catarrh. Emphasis is placed on diet, parasites, alcohol, malaria, dysentery, obstruction, diagnostic signs, prognosis, and largely nineteenth-century therapies. John went to the hallway.",
+          "input_tokens": 82501,
+          "output_tokens": 184,
+          "cost_usd": 0.016721
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "The text reviews historical management and pathology of biliary disease, gallstones, bile-duct obstruction, portal-vein thrombosis, liver parasites, pancreatic disorders, and peritonitis. It describes gallstone formation from concentrated, acidified bile, mucus, cholesterin, stasis, diet, age, sex, and inflammation; hepatic colic causes severe radiating pain, vomiting, constipation, and sometimes jaundice. Bile-duct obstruction produces persistent jaundice, pruritus, digestive failure, pale stools, renal and neurologic complications. Portal thrombosis causes rapid ascites, splenomegaly, collateral veins, and hemorrhage; suppurative pylephlebitis leads to hepatic abscesses. Hydatid cysts enlarge slowly and are treated chiefly by aspiration or surgery. Pancreatic disease causes pain, wasting, fatty stools, jaundice, and diabetes. Peritonitis presents with pain, rigidity, distension, vomiting, constipation, and shock, historically treated with opium. **Sandra journeyed to the bedroom.**",
+          "input_tokens": 82694,
+          "output_tokens": 249,
+          "cost_usd": 0.016838
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "bathroom",
+        "raw_answer": "bathroom",
+        "correct": true,
+        "input_tokens": 1123,
+        "output_tokens": 6,
+        "cost_usd": 0.000232
+      },
+      "correct": true,
+      "raw_answer": "bathroom",
+      "total_tokens": 249458,
+      "peak_context_tokens": 82694,
+      "cost_usd": 0.050528,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 246051,
+      "part_a_cost_usd": 0.049353
+    },
+    {
+      "bucket": "512k",
+      "id": 1,
+      "condition": "isolate",
+      "person": "Mary",
+      "target": "garden",
+      "n_chunks": 5,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "Mary went back to the bathroom.",
+          "input_tokens": 97727,
+          "output_tokens": 11,
+          "cost_usd": 0.019559
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 97704,
+          "output_tokens": 86,
+          "cost_usd": 0.019644
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "Mary went to the garden.",
+          "input_tokens": 97406,
+          "output_tokens": 58,
+          "cost_usd": 0.019551
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 97708,
+          "output_tokens": 122,
+          "cost_usd": 0.019688
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "report": "\"Early the next morning, Mary got up, and told me that nobody was up yet in the house; and that she would show me the DRY PAN and the GRADUAL FIRE, on condition that I should keep it a secret for her sake as well as my own.\"",
+          "input_tokens": 98299,
+          "output_tokens": 154,
+          "cost_usd": 0.019845
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "garden",
+        "raw_answer": "garden",
+        "correct": true,
+        "input_tokens": 703,
+        "output_tokens": 5,
+        "cost_usd": 0.000147
+      },
+      "correct": true,
+      "raw_answer": "garden",
+      "total_tokens": 489983,
+      "peak_context_tokens": 98299,
+      "cost_usd": 0.098434,
+      "part_a_correct": false,
+      "part_a_real_input_tokens": 486168,
+      "part_a_cost_usd": 0.195158
+    },
+    {
+      "bucket": "512k",
+      "id": 1,
+      "condition": "summary",
+      "person": "Mary",
+      "target": "garden",
+      "n_chunks": 5,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The text presents an extensive theory of architecture, treating walls as \u201cveils\u201d composed of bases, shafts, cornices, piers, arches, roofs, buttresses, apertures, tracery, and ornament. It explains how construction follows structural necessity, emphasizing stability, material, proportion, subordination, and truthful expression. Cornices protect or support walls; shafts concentrate masonry; capitals expand bearing surfaces; arches distribute loads; buttresses resist lateral forces; windows and doors require carefully organized openings and supports. Ornament should derive from nature, be adapted to viewing distance, obey hierarchy, and avoid affectation or imitation of human manufacture. Northern Gothic is contrasted with southern classical and Byzantine traditions. Mary went back to the bedroom, later to the office, and later to the bathroom.",
+          "input_tokens": 97741,
+          "output_tokens": 201,
+          "cost_usd": 0.019789
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "The text surveys Gothic ornament: dentils, rolls, recesses, bases, spurs, shafts, capitals, cornices, archivolts, roofs, and wall decoration. It praises naturalistic, labor-intensive, structurally integrated ornament and criticizes Renaissance formalism, rustication, excessive finials, and mechanical materials. It contrasts Byzantine restraint, Lombard energy, Northern grotesque, and Venetian Gothic refinement. It also discusses artistic classification, natural representation, and ancient depictions of water. Travel narratives describe moving from Padua through Dolo and Mestre by gondola into Venice, and an expedition across Tunisia\u2019s desert, Jereed, Ghafsa, Toser, and Nefta, emphasizing palms, salt lakes, springs, wildlife, architecture, governance, slavery, and local customs.",
+          "input_tokens": 97718,
+          "output_tokens": 216,
+          "cost_usd": 0.019803
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "The text is a collage of nineteenth-century travel writing, fiction, poetry, historical commentary, drama, and editorial notes. It describes Tunisian oases, desert travel, commerce, colonial violence, and Mogador\u2019s bombardment; then presents dances, myths, fantastical tales, scientific hoaxes, Irish and American patriotic poems, Masonry, and reflections on progress. Later sections recount the Lower Canada rebellions and Gordon\u2019s South African and Congo missions. The dramatic excerpt follows characters moving among a police station, Deanery, stable, conservatory, library, windows, and racecourse while concealing scandals. Themes include imperialism, liberty, social reform, science, religion, deception, loyalty, and national identity.",
+          "input_tokens": 97420,
+          "output_tokens": 269,
+          "cost_usd": 0.019807
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "summary": "The text recounts General Gordon\u2019s rushed mission from London to Khartoum, his heroic defense against the Mahdi, the British government\u2019s indecision, the delayed relief expedition, and his death when Khartoum fell. It also includes two romances: Bray rescues Eugenia on a mountain trail, leading to a mining strike and marriage; Miss Trotter uncovers Frida\u2019s betrayal, falls in love with Chris Calton, and leaves the hotel with him. Finally, it describes Louis XVI\u2019s imprisonment in the Temple, trial before the Convention, final family meeting, journey to the scaffold at the Place de la R\u00e9volution, and execution.",
+          "input_tokens": 97722,
+          "output_tokens": 233,
+          "cost_usd": 0.019824
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "summary": "Marie Antoinette was imprisoned in the Temple, separated from her son, and moved to the Conciergerie before execution in 1793. Madame Elisabeth remained in the Temple until taken to the Conciergerie and guillotined in 1794. The Dauphin suffered abuse in the Temple and died there in 1795; Madame Royale was later released, traveled to Vienna and Mittau, married the Duc d\u2019Angoul\u00eame, and endured repeated exile. The text then attacks Catholicism and the Inquisition through accounts of torture, imprisonment, convent abuse, and persecution. It concludes with scientific articles on astronomy, the ocellated pheasant, the maidenhair tree, and American woods, followed by an outline and opening cantos of Scott\u2019s *The Lady of the Lake*, set around Loch Katrine and the Scottish Highlands.",
+          "input_tokens": 98313,
+          "output_tokens": 265,
+          "cost_usd": 0.019981
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "bathroom",
+        "raw_answer": "bathroom",
+        "correct": false,
+        "input_tokens": 1369,
+        "output_tokens": 6,
+        "cost_usd": 0.000281
+      },
+      "correct": false,
+      "raw_answer": "bathroom",
+      "total_tokens": 491473,
+      "peak_context_tokens": 98313,
+      "cost_usd": 0.099485,
+      "part_a_correct": false,
+      "part_a_real_input_tokens": 486168,
+      "part_a_cost_usd": 0.195158
+    },
+    {
+      "bucket": "512k",
+      "id": 2,
+      "condition": "isolate",
+      "person": "John",
+      "target": "bedroom",
+      "n_chunks": 5,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "John Lane put up at the stable once a week.",
+          "input_tokens": 97976,
+          "output_tokens": 181,
+          "cost_usd": 0.019812
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "_John in the Wilderness_, said to be at Paris[i181].",
+          "input_tokens": 97746,
+          "output_tokens": 187,
+          "cost_usd": 0.019774
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 97998,
+          "output_tokens": 139,
+          "cost_usd": 0.019766
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "report": "\"John travelled to the bathroom.\"\n\n\"John travelled to the kitchen.\"",
+          "input_tokens": 98070,
+          "output_tokens": 78,
+          "cost_usd": 0.019708
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "report": "John went back to the bathroom.",
+          "input_tokens": 99975,
+          "output_tokens": 11,
+          "cost_usd": 0.020008
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "bathroom",
+        "raw_answer": "bathroom",
+        "correct": false,
+        "input_tokens": 676,
+        "output_tokens": 6,
+        "cost_usd": 0.000142
+      },
+      "correct": false,
+      "raw_answer": "bathroom",
+      "total_tokens": 493043,
+      "peak_context_tokens": 99975,
+      "cost_usd": 0.09921,
+      "part_a_correct": false,
+      "part_a_real_input_tokens": 489090,
+      "part_a_cost_usd": 0.196055
+    },
+    {
+      "bucket": "512k",
+      "id": 2,
+      "condition": "summary",
+      "person": "John",
+      "target": "bedroom",
+      "n_chunks": 5,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines extensive notes on Ovid\u2019s *Amores* with fictional adventures. The Brownies secretly sail yachts, practice archery and fishing, visit Niagara Falls, garden, celebrate, swim, fly kites, dance, make candy, operate trains and boats, race horses, hold feasts, and explore canals and an artist\u2019s studio.\n\nThe main narrative follows Harry West. He flees the poorhouse with Ben Smart in George Leman\u2019s boat, encounters dangerous rapids, and is captured. Returned to the poorhouse, he is sent to Jacob Wire\u2019s house but escapes toward Boston. He shelters in a forest charcoal cabin, meets Julia Bryant near a brook, and travels to Boston in John Lane\u2019s wagon. There he works first at Major Phillips\u2019s stable, then at Wake & Wade\u2019s store. After visiting Julia in Rockville, Harry loses his savings, survives an assault, and is jailed after Edward Flint frames him for theft.",
+          "input_tokens": 97990,
+          "output_tokens": 292,
+          "cost_usd": 0.019948
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "Harry West is cleared when Edward Flint confesses framing him; Harry reunites with his father, visits Redfield, inherits wealth, partners with Wade, and marries Julia. The Boston dance manual explains positions, steps, turns, and variations. Other excerpts include plays, Irish goose farming, and Robert Ingersoll\u2019s arguments for science, liberty, reason, secularism, abolition, honest money, and religious tolerance. Ingersoll attacks biblical literalism, slavery, persecution, eternal punishment, and church authority while praising human happiness and progress. A frontier adventure follows Hellena, Fire Cloud, Lightfoot, Black Bill, and Captain Flint through caves, forests, Indian villages, rivers, and New York. Leonardo da Vinci\u2019s catalogue lists his designs, drawings, sculptures, paintings, and anatomical studies; a treatise advises students to learn perspective, study masters, and observe nature.",
+          "input_tokens": 97760,
+          "output_tokens": 215,
+          "cost_usd": 0.01981
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines Leonardo da Vinci\u2019s extensive *Treatise on Painting* with historical and literary excerpts. Leonardo discusses disciplined study, anatomy, proportion, motion, balance, perspective, light, shadow, color, composition, expression, landscape, and the importance of observing Nature rather than copying other artists. Later passages recount Minnesota history: Shelley moved from Pennsylvania to Philadelphia, served in Mexico, and traveled to St. Paul; printers served in the Civil War; Minnesota troops fought at Mill Springs and Pittsburg Landing. Other sections discuss political satire, national memory, Jewish identity, persecution, nationalism, and cultural assimilation. A childhood memoir describes traveling hidden under a sleigh seat to a spelling match. Mary returned to the bedroom. The text ends with a missing woman\u2019s clothing and identifying scar.",
+          "input_tokens": 98012,
+          "output_tokens": 244,
+          "cost_usd": 0.002431
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "summary": "Raymond investigates Leavenworth\u2019s murder, initially suspecting Eleanore\u2019s secret husband, Henry Clavering. Evidence reveals Mary secretly married Clavering and may have benefited from her uncle\u2019s death. Hannah, hidden by Amy Belden in R----, dies after receiving poison and a forged confession implicating Clavering. Gryce proves the confession was fabricated from paper taken from Mary\u2019s desk. He stages an arrest revelation in a secluded garret room, causing Trueman Harwell to confess: obsessed with Mary, he overheard her uncle rejecting her, entered the library, shot Leavenworth, and manipulated evidence. Clavering enters, and Mary ultimately admits her selfish deception but is declared innocent.",
+          "input_tokens": 98084,
+          "output_tokens": 178,
+          "cost_usd": 0.01983
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "summary": "Trueman Harwell confesses murdering Leavenworth, concealing evidence, manipulating Hannah, and framing Eleanore before poisoning Hannah and being arrested. Eleanore and Mary reconcile, while the fortune is devoted to charity. A critique attacks Osteopathy and traveling medical frauds, urging scientific honesty.\n\nDuring the North-West Rebellion, Mounted Police defend Regina, Prince Albert, Carlton, Battleford, Fort Pitt, Edmonton, and the western reserves. Cameron patrols the Sun Dance Trail, saves cattle from Raven\u2019s scheme, and Raven dies heroically. Cameron later captures Copperhead at Manitou Rock and returns him to Fort Calgary. Dr. Martin stays after discovering Moira is not marrying Smith.\n\nMeanwhile, Amy\u2019s springtime life at the Clifford farmhouse centers on nature, Easter, birds, fishing, bees, roses, and growing affection between Amy and Webb. Burt learns patience, while Webb realizes he loves Amy and briefly travels to the city.",
+          "input_tokens": 99989,
+          "output_tokens": 237,
+          "cost_usd": 0.020282
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "NOT FOUND",
+        "raw_answer": "NOT FOUND",
+        "correct": false,
+        "input_tokens": 1458,
+        "output_tokens": 34,
+        "cost_usd": 0.000332
+      },
+      "correct": false,
+      "raw_answer": "NOT FOUND",
+      "total_tokens": 494493,
+      "peak_context_tokens": 99989,
+      "cost_usd": 0.082633,
+      "part_a_correct": false,
+      "part_a_real_input_tokens": 489090,
+      "part_a_cost_usd": 0.196055
+    },
+    {
+      "bucket": "512k",
+      "id": 3,
+      "condition": "isolate",
+      "person": "Sandra",
+      "target": "kitchen",
+      "n_chunks": 5,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "Sandra journeyed to the kitchen.",
+          "input_tokens": 96161,
+          "output_tokens": 33,
+          "cost_usd": 0.019272
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "Daniel journeyed to the bathroom.",
+          "input_tokens": 96208,
+          "output_tokens": 11,
+          "cost_usd": 0.019255
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96152,
+          "output_tokens": 6,
+          "cost_usd": 0.019238
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96185,
+          "output_tokens": 6,
+          "cost_usd": 0.019244
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96497,
+          "output_tokens": 29,
+          "cost_usd": 0.019334
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "kitchen",
+        "raw_answer": "kitchen",
+        "correct": true,
+        "input_tokens": 650,
+        "output_tokens": 6,
+        "cost_usd": 0.000137
+      },
+      "correct": true,
+      "raw_answer": "kitchen",
+      "total_tokens": 481944,
+      "peak_context_tokens": 96497,
+      "cost_usd": 0.09648,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 478527,
+      "part_a_cost_usd": 0.191693
+    },
+    {
+      "bucket": "512k",
+      "id": 3,
+      "condition": "summary",
+      "person": "Sandra",
+      "target": "kitchen",
+      "n_chunks": 5,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The text reviews acute and chronic intestinal catarrh, cholera morbus, infantile summer diarrhea, pseudomembranous enteritis, and dysentery. It describes causes including irritants, contaminated food or water, heat, poor sanitation, infection, emotional stress, and chronic disease; pathological findings such as hyperemia, edema, mucus, follicular enlargement, ulceration, and intestinal atrophy; and symptoms ranging from diarrhea and colic to vomiting, dehydration, emaciation, collapse, and fever. Treatment historically emphasized rest, diet, hydration, milk, hygiene, opium, bismuth, astringents, enemas, and climate change, especially sending sick infants from cities to clean country air. Sandra journeyed to the kitchen.",
+          "input_tokens": 96175,
+          "output_tokens": 228,
+          "cost_usd": 0.019509
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "The text reviews dysentery\u2019s uncertain causes, possible contagion, symptoms, pathology, complications, prognosis, prevention, and historical treatments such as irrigation and ipecacuanha. It then discusses typhlitis, perityphlitis, appendiceal disease, intestinal ulcers, hemorrhage, obstruction, intussusception, cancer, and lardaceous degeneration. It also covers rectal and anal disorders, including prolapse, hemorrhoids, fissures, ulcers, abscesses, fistulas, syphilis, tuberculosis, cancer, and neurological dysfunction. Treatments described include rest, diet, opium, enemas, aspiration, incision, colotomy, and laparotomy. **Daniel journeyed to the bathroom.**",
+          "input_tokens": 96222,
+          "output_tokens": 185,
+          "cost_usd": 0.019466
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "The text reviews historical treatments for rectal disorders, including strictures, abscesses, prolapse, fistula, hemorrhoids, hemorrhage, and rectal feeding; patients were often advised bed rest, while outdoor life was recommended for itching. It then surveys intestinal parasites\u2014tapeworms, flukes, nematodes, trichinae, and filariae\u2014their life cycles, symptoms, treatments, and prevention through hygiene, filtration, and thoroughly cooked meat. Finally, it discusses liver disease: biliousness, lithaemia, glycosuria, jaundice, hepatic congestion, perihepatitis, cirrhosis, abscess, acute yellow atrophy, phosphorus poisoning, and liver cancer, emphasizing diet, abstinence from alcohol, supportive care, and surgery or aspiration when necessary.",
+          "input_tokens": 96166,
+          "output_tokens": 289,
+          "cost_usd": 0.01958
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "summary": "The text reviews diseases of the liver, biliary passages, pancreas, and peritoneum. Liver cancer causes painful, nodular enlargement, cachexia, ascites, jaundice, digestive failure, and rapid death; treatment is palliative. Amyloid liver is a slowly enlarging, firm, usually painless organ associated with chronic suppuration, syphilis, malaria, or cachexia. Fatty liver produces smooth enlargement and digestive symptoms, often linked to obesity, alcoholism, poor diet, or impaired oxidation, and may improve with dietary management. Bile-duct catarrh and gallstones cause indigestion, hepatic colic, obstruction, and jaundice; treatment historically emphasized diet, purgation, anodynes, and occasionally surgery. Persistent biliary obstruction causes cholestasis, hemorrhage, renal injury, cholaemia, neurological decline, and death. Portal-vein thrombosis causes sudden ascites and gastrointestinal congestion, while suppurative pylephlebitis produces fever and multiple hepatic abscesses. Hydatid disease forms slowly growing, elastic liver cysts, sometimes showing hydatid fremitus, and is treated by puncture, aspiration, or surgery. Pancreatic disorders cause pain, wasting, fatty stools, jaundice, diabetes, cysts, pancreatitis, or cancer. Acute peritonitis produces diffuse pain, tenderness, tympanites, vomiting, constipation, tachycardia, and potentially fatal collapse. The author describes treating patients in Vermont and later Bellevue Hospital, and mentions a patient traveling to Washington.",
+          "input_tokens": 96199,
+          "output_tokens": 444,
+          "cost_usd": 0.019773
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "summary": "The text reviews chronic, tuberculous, cancerous, infantile, and localized peritonitis, emphasizing abscess formation, adhesions, ascites, obstruction, diagnostic distinctions, prognosis, and largely palliative treatment. It contrasts tuberculous peritonitis\u2014often febrile, meteoristic, progressive, and associated with pulmonary disease\u2014with cancerous peritonitis, characterized by rapid decline, ascites, nodules, obstruction, and relatively little fever. Ascites is chiefly attributed to portal obstruction from cirrhosis, liver disease, tumors, or peritoneal pathology; diagnosis relies on shifting dullness and fluid wave, while treatment includes diuretics, purgatives, diaphoretics, and paracentesis. Tabes mesenterica is described as tuberculosis of mesenteric glands in children, causing abdominal distension, emaciation, anemia, digestive disturbance, and usually death; prevention and nutritional palliation are stressed. Cases mention patients being brought from a country home to a city home and a Vermont patient.",
+          "input_tokens": 96511,
+          "output_tokens": 261,
+          "cost_usd": 0.019615
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "kitchen",
+        "raw_answer": "kitchen",
+        "correct": true,
+        "input_tokens": 1601,
+        "output_tokens": 6,
+        "cost_usd": 0.000327
+      },
+      "correct": true,
+      "raw_answer": "kitchen",
+      "total_tokens": 484287,
+      "peak_context_tokens": 96511,
+      "cost_usd": 0.09827,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 478527,
+      "part_a_cost_usd": 0.191693
+    },
+    {
+      "bucket": "512k",
+      "id": 4,
+      "condition": "isolate",
+      "person": "Daniel",
+      "target": "hallway",
+      "n_chunks": 5,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "Of king Darius we are told that, when he had cast Daniel into the den of lions, he \u201cwent to his palace, and passed the night fasting, neither were instruments of musick brought before him;\u201d",
+          "input_tokens": 97322,
+          "output_tokens": 182,
+          "cost_usd": 0.019683
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 97196,
+          "output_tokens": 42,
+          "cost_usd": 0.01949
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "\u201cDaniel journeyed to the hallway.\u201d",
+          "input_tokens": 97363,
+          "output_tokens": 45,
+          "cost_usd": 0.019527
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 97452,
+          "output_tokens": 42,
+          "cost_usd": 0.019541
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 98939,
+          "output_tokens": 28,
+          "cost_usd": 0.019821
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "hallway",
+        "raw_answer": "hallway",
+        "correct": true,
+        "input_tokens": 688,
+        "output_tokens": 6,
+        "cost_usd": 0.000145
+      },
+      "correct": true,
+      "raw_answer": "hallway",
+      "total_tokens": 489305,
+      "peak_context_tokens": 98939,
+      "cost_usd": 0.098207,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 485595,
+      "part_a_cost_usd": 0.194621
+    },
+    {
+      "bucket": "512k",
+      "id": 4,
+      "condition": "summary",
+      "person": "Daniel",
+      "target": "hallway",
+      "n_chunks": 5,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The text is a compilation of unrelated excerpts. In one novel, Berrie travels from Bear Tooth Springs to a hotel caf\u00e9, where she meets Wayland\u2019s father; the family later proposes traveling by private car to California and buying a ranch. Another story follows Harry\u2019s move from a stable into Wake & Wade\u2019s Boston dry-goods store, his boarding with the Flints, visits to Rockville, hospitalization after an assault, and eventual discovery of his father. A children\u2019s adventure depicts the Dashahed Zouaves camping, reviewing troops, and returning to New York. Other sections discuss Leonardo\u2019s principles of perspective and painting, ancient Egyptian, Assyrian, Hebrew, Greek, Roman, and Chinese musical instruments, and collections of jokes, riddles, advertisements, and publishing notes.",
+          "input_tokens": 97336,
+          "output_tokens": 205,
+          "cost_usd": 0.002249
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "The text surveys musical instruments across China, India, Persia, Arabia, the Americas, and medieval Europe, describing their construction, scales, cultural uses, transmission, and historical development. It then shifts into assorted writings: Pocahontas and Powhatan in Virginia; philosophical reflections on nature, physiology, and scientific method; literary sketches and poems; and sensational fiction about photographer John Pollexfen, who removes Lucile\u2019s eye for photographic research before her lover sacrifices his own. Finally, an antiquarian narrator travels from New York through Nicaragua to Palenque, explores ruins with Pio, discovers Casa Grande, encounters an Aztec princess, and reaches a hidden living city.",
+          "input_tokens": 97210,
+          "output_tokens": 257,
+          "cost_usd": 0.01975
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "Pio leads the narrator through a hidden granite passage into a palace apartment, where they disguise themselves in royal robes, then enter a brilliantly lit classroom. Aztec scholars learn language through acoustic instruments and hieroglyphics. The narrator later helps rescue European explorer Armand de L\u2019Oreille from sacrifice, escapes the Living City, and returns to Palenque\u2019s Casa Grande.\n\nThe text then presents legends of Lake Bigler, including doomed lovers and mermaids; fantastic essays on telescopic vision, the earth\u2019s molten center, progress, liberty, science, and marriage; historical sketches of Washington and George III; and tales of crime, Parisian Bohemia, and wartime Kentucky. It ends with accounts of artists, caf\u00e9s, students, and the continuing Civil War.",
+          "input_tokens": 97377,
+          "output_tokens": 232,
+          "cost_usd": 0.019754
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines several narratives. C\u00e6sar Simon dies in battle as the Confederacy collapses, ending his family\u2019s male line. In Australia, Ruby witnesses a bushfire, learns old Davis died, and later travels to Scotland, where Jack helps her embrace Christianity; Jack and May fall in love. Fabre describes Osmia bees regulating offspring sex according to cell size, Glow-worms anaesthetizing and liquefying snails, and cabbage caterpillars and their Microgaster parasites. In Canada, Cameron, Mandy, Raven, Moira, Smith, and Mounted Police confront Indigenous unrest during the 1885 Northwest Rebellion. Smith rebuilds Cameron\u2019s burned home; Cameron patrols the Sun Dance Canyon, arrests cattle thieves, and exposes conspiracies. Raven, an outlaw, saves a cattle herd but dies protecting others. Cameron continues pursuing Sioux leader Onawata while Crowfoot struggles to restrain rebellion.",
+          "input_tokens": 97466,
+          "output_tokens": 240,
+          "cost_usd": 0.019781
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "summary": "Cameron captures Copperhead after a brutal pursuit through the Ghost River forest, aided by Jerry and the Indian boy. He returns to Fort Calgary with the Sioux chief, while the rebellion collapses. At the Big Horn Ranch House, Dr. Martin discovers Moira loves him, proposes, and decides to stay. Later, Martin treats an injured Indian boy in a tent and defends the women against drunken braves. During the rebellion, Mounted Police preserve peace across the West. Cameron prevents a cattle stampede, while outlaw Raven saves the herd, kills Little Thunder, and dies beside his horse. Cameron ultimately captures Copperhead at Manitou Rock. The remaining text shifts to John Evelyn\u2019s diary, chronicling religious conflict, political upheaval, William of Orange\u2019s invasion, the Glorious Revolution, and the establishment of William and Mary.",
+          "input_tokens": 98953,
+          "output_tokens": 234,
+          "cost_usd": 0.020071
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "NOT FOUND",
+        "raw_answer": "NOT FOUND",
+        "correct": false,
+        "input_tokens": 1406,
+        "output_tokens": 29,
+        "cost_usd": 0.000316
+      },
+      "correct": false,
+      "raw_answer": "NOT FOUND",
+      "total_tokens": 490945,
+      "peak_context_tokens": 98953,
+      "cost_usd": 0.081921,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 485595,
+      "part_a_cost_usd": 0.194621
+    },
+    {
+      "bucket": "512k",
+      "id": 5,
+      "condition": "isolate",
+      "person": "Daniel",
+      "target": "bathroom",
+      "n_chunks": 5,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "Sandra travelled to the kitchen.",
+          "input_tokens": 96271,
+          "output_tokens": 10,
+          "cost_usd": 0.019266
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96438,
+          "output_tokens": 33,
+          "cost_usd": 0.019327
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96100,
+          "output_tokens": 52,
+          "cost_usd": 0.019282
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96319,
+          "output_tokens": 60,
+          "cost_usd": 0.019336
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 97479,
+          "output_tokens": 65,
+          "cost_usd": 0.019574
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "NOT FOUND",
+        "raw_answer": "NOT FOUND",
+        "correct": false,
+        "input_tokens": 645,
+        "output_tokens": 6,
+        "cost_usd": 0.000136
+      },
+      "correct": false,
+      "raw_answer": "NOT FOUND",
+      "total_tokens": 483478,
+      "peak_context_tokens": 97479,
+      "cost_usd": 0.096921,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 479932,
+      "part_a_cost_usd": 0.192345
+    },
+    {
+      "bucket": "512k",
+      "id": 5,
+      "condition": "summary",
+      "person": "Daniel",
+      "target": "bathroom",
+      "n_chunks": 5,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The excerpt combines several works. In *The Lady of the Lake*, Fitz-James travels with Roderick Dhu through the Highlands, defeats him at Coilantogle Ford, and rides to Stirling, where Douglas seeks justice and Ellen petitions King James, who reveals Fitz-James\u2019s identity and reunites her with Malcolm. Roderick dies in prison after hearing the battle recounted.\n\nIn Van Bibber stories, Van Bibber travels through New York, captures a burglar, and escorts him to Grand Central Station; he later arranges an eloping couple\u2019s wedding. In a later mystery, Elaine and Davila are abducted from Hampton and taken to a Bay house and tug, then freed after a ransom check.\n\nThe final chapters recount Asaph and Angeline Hall\u2019s move to Cambridge, Washington, and Georgetown, their scientific and family life, and Angeline\u2019s devoted, intellectually ambitious character.",
+          "input_tokens": 96285,
+          "output_tokens": 244,
+          "cost_usd": 0.01955
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "Lester Kane leaves Jennie in their Hyde Park home to preserve his inheritance, arranging a cottage for her in Sandwood. She loses her father Gerhardt and daughter Vesta, while Lester marries Letty Gerald, later regrets abandoning Jennie, and dies in his Auditorium hotel room after summoning her. Jennie attends his funeral at a Chicago Catholic church and watches his coffin depart by train for Cincinnati. Years later she raises foster children near Jackson Park.\n\nA separate historical narrative follows Catharine Glover, abducted to Falkland Castle, where Prince Rothsay is imprisoned in a dungeon and starved by Ramorny and Dwining. Catharine and Louise attempt to rescue him; Douglas eventually captures the conspirators. At Perth\u2019s North Inch, Clan Chattan defeats Clan Quhele in a bloody battle. Eachin escapes across the Tay and later reaches Campsie, where Catharine confronts him.",
+          "input_tokens": 96452,
+          "output_tokens": 259,
+          "cost_usd": 0.019601
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines several narratives. In *The Fair Maid of Perth*, Conachar kills himself at a waterfall; Henry and Catharine marry in Perth. In a modern hospital story, Sidney trains as a nurse, serves patients, and returns to the ward and operating room. K., formerly surgeon Edwardes, lives in the Page house, saves Max Wilson after Joe shoots him at Schwitter\u2019s road-house, and ultimately reunites with Sidney. Carlotta\u2019s jealousy causes medical sabotage, but she later confesses and accepts K.\u2019s help. Christine struggles with Palmer, while Tillie leaves Schwitter\u2019s immoralized inn for the barn and has a baby. Sidney rejects Max and declares love for K. The remaining excerpts describe Brownies\u2019 nocturnal adventures: whale-riding, kite-flying, dancing, candy-making, locomotives, boats, races, feasts, Halloween games, and erecting a flagpole.",
+          "input_tokens": 96114,
+          "output_tokens": 250,
+          "cost_usd": 0.019523
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines several unrelated works. Brownies perform nighttime tasks, raise a flagpole, move canal boats, and visit an artist\u2019s studio. In the Rover Boys\u2019 African adventure, the party travels from Boma through Congo jungles, is captured at a hostelry, escapes from an old fort, reaches a gold mountain, and finds Anderson Rover imprisoned in a mountain village before returning home. A dance manual explains the Boston, Turkey Trot, Aeroplane Glide, and Tango. A comic drama follows Zoie and Aggie in their bedroom and apartment as they scheme to win Alfred back by acquiring babies, while Jimmy repeatedly travels between the Children\u2019s Home, homes, halls, streets, and fire escape; the deception collapses when the babies\u2019 mothers arrive. Entomological essays describe flies, processionary caterpillars, and Lycosa spiders, emphasizing instinct, repetitive behavior, maternal care, and practical preservation methods.",
+          "input_tokens": 96333,
+          "output_tokens": 278,
+          "cost_usd": 0.0196
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "summary": "The text surveys Fabre\u2019s observations of animal behavior: Lycosa spiders adopt unrelated young and bask in sunlight; Epeira spiders construct adhesive webs, detect prey through telegraph-like threads, immobilize diverse insects, and consume them gradually. Eumenes wasps build decorated masonry nests, provision larvae with caterpillars, and suspend eggs safely above prey. Osmia bees select nesting sites, regulate offspring sex according to available space, and can produce male-only broods in narrow shells. Glow-worms anesthetize and liquefy snails, adhere to smooth surfaces, and use controlled bioluminescence for mating. Cabbage caterpillars consume crucifers, while Microgaster parasites develop inside them and emerge to spin cocoons.\n\nThe latter portion is a diary of Carrie Richards\u2019s life in Canandaigua, New York, including church, school, domestic, social, and Civil War experiences. She travels to Victor, Penn Yan, Utica, New York City, Buffalo, Niagara Falls, and other nearby places; records graduation, marriages, wartime deaths, Lincoln\u2019s assassination, and local commemorations.",
+          "input_tokens": 97493,
+          "output_tokens": 279,
+          "cost_usd": 0.019833
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "NOT FOUND",
+        "raw_answer": "NOT FOUND",
+        "correct": false,
+        "input_tokens": 1569,
+        "output_tokens": 51,
+        "cost_usd": 0.000375
+      },
+      "correct": false,
+      "raw_answer": "NOT FOUND",
+      "total_tokens": 485607,
+      "peak_context_tokens": 97493,
+      "cost_usd": 0.098482,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 479932,
+      "part_a_cost_usd": 0.192345
+    },
+    {
+      "bucket": "768k",
+      "id": 1,
+      "condition": "isolate",
+      "person": "Sandra",
+      "target": "kitchen",
+      "n_chunks": 8,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96132,
+          "output_tokens": 27,
+          "cost_usd": 0.019259
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 95420,
+          "output_tokens": 6,
+          "cost_usd": 0.019091
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "Sandra went to the garden.",
+          "input_tokens": 95795,
+          "output_tokens": 46,
+          "cost_usd": 0.019214
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96232,
+          "output_tokens": 27,
+          "cost_usd": 0.019279
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "report": "Sandra moved to the kitchen.",
+          "input_tokens": 96251,
+          "output_tokens": 10,
+          "cost_usd": 0.019262
+        },
+        {
+          "chunk": 6,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96196,
+          "output_tokens": 6,
+          "cost_usd": 0.019246
+        },
+        {
+          "chunk": 7,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96213,
+          "output_tokens": 6,
+          "cost_usd": 0.01925
+        },
+        {
+          "chunk": 8,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 98188,
+          "output_tokens": 6,
+          "cost_usd": 0.019645
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "kitchen",
+        "raw_answer": "kitchen",
+        "correct": true,
+        "input_tokens": 669,
+        "output_tokens": 6,
+        "cost_usd": 0.000141
+      },
+      "correct": true,
+      "raw_answer": "kitchen",
+      "total_tokens": 771236,
+      "peak_context_tokens": 98188,
+      "cost_usd": 0.154387,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 766147,
+      "part_a_cost_usd": 0.306822
+    },
+    {
+      "bucket": "768k",
+      "id": 1,
+      "condition": "summary",
+      "person": "Sandra",
+      "target": "kitchen",
+      "n_chunks": 8,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The narrative follows Cameron and his family through the Canadian West during rising Indigenous unrest and the 1885 Rebellion. Raven rescues Moira from a runaway wagon; Smith organizes construction of the Camerons\u2019 new home; Mandy nurses an injured Piegan boy. Cameron investigates Sun Dance Canyon, arrests Eagle Feather, confronts conspirators, and patrols the reserves. Raven, an outlaw, saves stolen cattle from destruction but dies protecting Cameron and defeating Little Thunder. Cameron later captures the Sioux agitator Copperhead after escaping captivity. His patrol work helps keep the Blackfeet loyal and prevents a wider uprising. After the rebellion, Cameron receives official praise. Dr. Martin remains in the West after confessing love to Moira. Additional articles discuss American building stones, farming, lime kilns, apple-jelly production, grape bags, solar heat, surveying, pheasants, trees, and horse breeding.",
+          "input_tokens": 96146,
+          "output_tokens": 240,
+          "cost_usd": 0.019517
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines a Shire-horse handbook with several fictional narratives. It advises breeding, feeding, training, teamwork, hoof care, showing, history, pricing, exports, and future demand. In Nerac, Gabriel Carew leaves Doctor Louis\u2019s house, visits the Three Black Crows inn, follows suspected robbers into the woods, and returns to his house. A robbery attempt at Doctor Louis\u2019s house leaves one intruder dead; the other is captured, questioned in a cell, and executed. Gabriel later becomes engaged to Lauretta. Eric is found murdered in the woods, while Emilius and Patricia flee; Emilius is eventually arrested. In Peru, Sam, Jimmie, and Carl fly from Quito to a valley, visit a haunted temple, enter its living quarters, and investigate a hidden chamber.",
+          "input_tokens": 95434,
+          "output_tokens": 272,
+          "cost_usd": 0.019413
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "Sam rescues Carl and Jimmie from a temple chamber where jaguars have been released, then unlocks the iron gate using Pedro\u2019s key. The boys discover secret tunnels leading from the subterranean animal den beneath the temple to the forest, where the _Ann_ is hidden; they retrieve food and ammunition and return through the tunnel. They repel attacking Indians and signal for the other aircraft. Meanwhile, Havens and his party pursue Redfern, whose agents have stolen coded travel plans. Ben and Jimmie secretly fly the _Louise_ to a fortress called the Mystery of the Andes; Havens and Sam follow in the _Ann_. Redfern captures Havens and Sam inside the fortress, but Ben and Jimmie free them. Redfern confesses, and the mystery proves to involve underground machinery and electric ghost lights.",
+          "input_tokens": 95809,
+          "output_tokens": 241,
+          "cost_usd": 0.019451
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "summary": "The text describes Johannesburg\u2019s rapid growth after gold discovery, the Uitlander-Boer conflict, Rhodes\u2019s imperial ambitions, and the failed Jameson Raid. Jameson\u2019s troops crossed into the Transvaal toward Johannesburg but surrendered at Doornkop; Johannesburg later recovered economically. It portrays rural Boers as isolated pastoralists, deeply religious, family-centered, skilled marksmen, and politically defensive, especially under President Kruger. Kruger\u2019s career, interview, diplomacy, opposition to Britain, and government are detailed, alongside Boer military preparations and American commercial influence. Johannesburg is depicted as wealthy, cosmopolitan, expensive, corrupt, dusty, and dominated by gambling. The text then shifts to nineteenth-century medical discussions of hereditary syphilis, stomatitis, thrush, gangrene, mercurial poisoning, tongue disorders, glossitis, ulcers, and their historical treatments.",
+          "input_tokens": 96246,
+          "output_tokens": 253,
+          "cost_usd": 0.019553
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "summary": "The text surveys dentition and diseases of the tonsils, pharynx, oesophagus, and stomach. It describes normal and abnormal tooth eruption, teething symptoms and complications, diagnosis, prevention, and historical treatments. Tonsillitis and pharyngitis are classified by inflammation type, causes, symptoms, pathology, prognosis, and treatment, including serious suppuration, gangrene, diphtheria-like membranes, and tuberculosis or syphilis. Oesophageal disorders include acute and chronic inflammation, ulcers, spasmodic or organic strictures, cancer, paralysis, and dilatation, emphasizing dysphagia and regurgitation. Gastric sections address functional dyspepsia, gastralgia, acute and chronic gastritis, and gastric ulcer, focusing on diet, nervous influences, pain, vomiting, bleeding, perforation, and historical therapies. The text also states: \u201cSandra moved to the kitchen.\u201d",
+          "input_tokens": 96265,
+          "output_tokens": 217,
+          "cost_usd": 0.019513
+        },
+        {
+          "chunk": 6,
+          "ok": true,
+          "error": null,
+          "summary": "Gastric ulcer varies from latent disease to chronic pain, dyspepsia, vomiting, hemorrhage, perforation, fistulas, peritonitis, adhesions, abscesses, and rare thoracic complications. Most ulcers heal, though scarring may cause pyloric stenosis, gastric deformity, relapses, or persistent symptoms. Diagnosis relies chiefly on epigastric pain, food-related symptoms, vomiting, and hematemesis; treatment emphasizes rest, strict bland nutrition, limited medications, and cautious management of hemorrhage or perforation.\n\nGastric cancer usually affects older adults, especially the pyloric region, producing anorexia, pain, vomiting, bleeding, progressive emaciation, anemia, cachexia, and sometimes a palpable tumor. It commonly metastasizes to lymph nodes, liver, peritoneum, and pancreas, and is generally fatal without successful early resection. Treatment is palliative, including dietary adjustment, narcotics, stomach washing, and occasionally surgery.\n\nGastric hemorrhage has numerous causes, while gastric dilatation results from pyloric obstruction, abnormal contents, or muscular weakness. Its characteristic signs are delayed, abundant vomiting of fermented, undigested food and abdominal distension.",
+          "input_tokens": 96210,
+          "output_tokens": 295,
+          "cost_usd": 0.019596
+        },
+        {
+          "chunk": 7,
+          "ok": true,
+          "error": null,
+          "summary": "The text surveys stomach anomalies, rupture, and gastromalacia, then extensively discusses intestinal indigestion, constipation, enteralgia, acute and chronic intestinal catarrh, cholera morbus, and summer diarrhoea in children. It describes causes including poor diet, infections, constipation, cold, heat, emotional strain, alcohol, portal congestion, and unsanitary conditions; symptoms include pain, gas, altered stools, vomiting, diarrhoea, anaemia, wasting, and neurological effects. Diagnosis relies on history, examination, stool analysis, and distinguishing obstruction, typhoid, dysentery, and organic disease. Treatment emphasizes rest, carefully selected diets, hydration, hygiene, exercise, and cautious medication. Recommended environmental measures include travel or relocation to cool, dry mountain or seashore climates, European or Virginia hot springs, and avoiding crowded, poorly ventilated city dwellings.",
+          "input_tokens": 96227,
+          "output_tokens": 269,
+          "cost_usd": 0.019568
+        },
+        {
+          "chunk": 8,
+          "ok": true,
+          "error": null,
+          "summary": "The text discusses infant summer diarrhea and cholera infantum, emphasizing watery stools, vomiting, dehydration, fever, intestinal inflammation, poor prognosis, hygiene, breast milk, and historical treatments. It then reviews pseudo-membranous enteritis, dysentery, typhlitis, intestinal ulcers, hemorrhage, and obstruction, including causes, pathology, symptoms, diagnosis, prognosis, and largely historical therapies. Dysentery is associated with contaminated water, heat, poor sanitation, ulcers, mucus, blood, tenesmus, and possible liver abscesses. Intestinal obstruction may result from strictures, fecal impaction, tumors, twisting, strangulation, or intussusception. John travelled to the hallway. Daniel moved to the kitchen.",
+          "input_tokens": 98202,
+          "output_tokens": 186,
+          "cost_usd": 0.019864
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "kitchen",
+        "raw_answer": "kitchen",
+        "correct": true,
+        "input_tokens": 2068,
+        "output_tokens": 6,
+        "cost_usd": 0.000421
+      },
+      "correct": true,
+      "raw_answer": "kitchen",
+      "total_tokens": 774586,
+      "peak_context_tokens": 98202,
+      "cost_usd": 0.156896,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 766147,
+      "part_a_cost_usd": 0.306822
+    },
+    {
+      "bucket": "768k",
+      "id": 2,
+      "condition": "isolate",
+      "person": "Daniel",
+      "target": "garden",
+      "n_chunks": 8,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "General French, soon joined by General Richardson, both of Sumner's corps, crossed the stream and made a desperate assault against the Southerners of D. H. Hill's division, stationed to the south of where the battle had previously raged--French on a line of heights strongly held by the Confederates, Richardson in the direction of a sunken road, since known as \"Bloody Lane.\"",
+          "input_tokens": 95943,
+          "output_tokens": 358,
+          "cost_usd": 0.019618
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 95578,
+          "output_tokens": 63,
+          "cost_usd": 0.019191
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96069,
+          "output_tokens": 6,
+          "cost_usd": 0.019221
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "report": "Daniel went to the garden.",
+          "input_tokens": 95880,
+          "output_tokens": 50,
+          "cost_usd": 0.019236
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 95856,
+          "output_tokens": 38,
+          "cost_usd": 0.019217
+        },
+        {
+          "chunk": 6,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 95922,
+          "output_tokens": 38,
+          "cost_usd": 0.01923
+        },
+        {
+          "chunk": 7,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96116,
+          "output_tokens": 31,
+          "cost_usd": 0.01926
+        },
+        {
+          "chunk": 8,
+          "ok": true,
+          "error": null,
+          "report": "\"On July 1, 1806, two young English gentlemen, Daniel and William Constable, arrived in New York.\"",
+          "input_tokens": 98515,
+          "output_tokens": 118,
+          "cost_usd": 0.019845
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "New York",
+        "raw_answer": "New York",
+        "correct": false,
+        "input_tokens": 768,
+        "output_tokens": 64,
+        "cost_usd": 0.00023
+      },
+      "correct": false,
+      "raw_answer": "New York",
+      "total_tokens": 771413,
+      "peak_context_tokens": 98515,
+      "cost_usd": 0.155048,
+      "part_a_correct": false,
+      "part_a_real_input_tokens": 765599,
+      "part_a_cost_usd": 0.30702
+    },
+    {
+      "bucket": "768k",
+      "id": 2,
+      "condition": "summary",
+      "person": "Daniel",
+      "target": "garden",
+      "n_chunks": 8,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The text surveys major Civil War campaigns from Shiloh through Gettysburg. Confederate forces initially surprised Grant at Shiloh, but Buell and Lew Wallace reinforced him, producing a Union victory after Albert Sidney Johnston\u2019s death. McClellan\u2019s Peninsula Campaign stalled at Yorktown, Fair Oaks, and the Seven Days\u2019 Battles, while Jackson\u2019s Valley Campaign diverted Union forces. Lee defeated Pope at Second Bull Run but was checked at Antietam, enabling Lincoln\u2019s Emancipation Proclamation. Union defeat followed at Fredericksburg and Chancellorsville, where Jackson was mortally wounded. Grant\u2019s bold campaign captured Vicksburg and Port Hudson, securing the Mississippi. Gettysburg then halted Lee\u2019s invasion of Pennsylvania, marking the Confederacy\u2019s high-water mark.",
+          "input_tokens": 95957,
+          "output_tokens": 207,
+          "cost_usd": 0.01944
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "The text recounts Civil War campaigns from Chickamauga and Chattanooga through the Wilderness, Spotsylvania, Cold Harbor, Atlanta, the Shenandoah, Petersburg, and Appomattox. Thomas defended Chickamauga and later defeated Hood at Nashville; Grant fought Lee relentlessly in Virginia, eventually forcing Richmond\u2019s evacuation and Lee\u2019s surrender at Appomattox on April 9, 1865. Sherman advanced from Chattanooga to Atlanta, marched from Atlanta to Savannah, then through the Carolinas, while Sheridan defeated Early in the Shenandoah Valley. The narrative also includes Farragut\u2019s victory at Mobile Bay, the hardships and destruction of Sherman\u2019s marches, railroad disasters, and a Belgian drama in which Grelieu authorizes flooding to halt invading Germans.",
+          "input_tokens": 95592,
+          "output_tokens": 206,
+          "cost_usd": 0.00227
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines three works. First, it surveys catastrophic railroad accidents\u2014Abergele, New Hamburg, Norwalk, bridge collapses, derailments, Revere, and others\u2014arguing that improved brakes, automatic block signals, interlocking systems, bridge guards, investigations, and disciplined operations greatly increase safety. It compares American, British, French, and Massachusetts accident statistics.\n\nSecond, Jimmieboy, the Sprite, and Major Blueface seek provisions in Fortyforefoot Valley. The Sprite becomes giant Bludgeonhead, carries Jimmieboy on his shoulder, enters the valley, and confronts Fortyforefoot. Jimmieboy is locked in the castle pantry, while Blueface is imprisoned in an ice-box; Bludgeonhead rescues both, and the soldiers celebrate before Jimmieboy returns home.\n\nThird, an Anglican theological work explains the Prayer Book, Sacraments, Baptism, Eucharist, Confirmation, Marriage, and Holy Orders, emphasizing matter and spirit, grace, discipline, Apostolic Succession, and the roles of bishops, priests, and deacons.",
+          "input_tokens": 96083,
+          "output_tokens": 315,
+          "cost_usd": 0.019595
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines Anglican teaching on apostolic succession, episcopal and priestly ordination, jurisdiction, confession, absolution, penance, and unction, followed by extensive riddles and advertisements. It also recounts Elsie Inglis\u2019s medical training and practice in Edinburgh, Dublin, Glasgow, London, and Paris; her suffrage activism and political views; founding of the Edinburgh Hospice; and establishment of the Scottish Women\u2019s Hospitals. During World War I she organized units serving in France, Belgium, Serbia, Russia, and elsewhere, despite British official resistance. Her hospitals treated wounded soldiers and epidemics, especially typhus in Serbia, where she became revered and was commemorated by a fountain at Mladenovatz.",
+          "input_tokens": 95894,
+          "output_tokens": 214,
+          "cost_usd": 0.019436
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "summary": "Elsie Inglis\u2019s Scottish Women\u2019s Hospitals served in Serbia, Russia, and Romania, treating wounded soldiers and fighting typhus amid invasions, retreats, captivity, and severe shortages. Her units worked at Kragujevatz, Mladanovatz, Valjevo, Krushieevatz, Medgidia, Braila, Galatz, Reni, and Odessa; they travelled through Archangel and Moscow to the Serbian Division. Inglis insisted on remaining with Serbian patients and later secured their evacuation. Exhausted and ill, she returned to Newcastle in November 1917 and died shortly afterward, honored in Edinburgh by Scotland and Serbia. The text also recounts her medical career, Edinburgh Hospice, suffrage activism, and leadership. Separate excerpts describe the Rover boys\u2019 African expedition: they find their father in a Bumwo mountain village, defeat King Susko\u2019s forces, and return home. Further passages portray Parisian student balls and Bohemian life.",
+          "input_tokens": 95870,
+          "output_tokens": 263,
+          "cost_usd": 0.01949
+        },
+        {
+          "chunk": 6,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines three works. It portrays Paris\u2019s Latin Quarter as a lively but precarious Bohemian world of artists, models, caf\u00e9s, cabarets, gardens, poverty, pleasure, and romance, including departures from studios and travel through Paris. It then explains Anglican doctrine through the Prayer Book: the Sacraments, especially Baptism, Eucharist, Confirmation, Marriage, Holy Orders, Penance, and Unction, emphasizing their matter, rites, spiritual effects, and ecclesiastical safeguards. Finally, Dutch colonial instructions describe governing Jaffnapatam in 1697: taxation, trade, rice and elephant supplies, fortifications, ships, roads, water tanks, labor, hospitals, churches, military staffing, and relations with local officials. Specific movements include artists returning to studios, travelers leaving Paris via the Gare Saint-Lazare, and colonial vessels moving among Jaffnapatam, Manaar, Colombo, Coromandel, and nearby forts.",
+          "input_tokens": 95936,
+          "output_tokens": 288,
+          "cost_usd": 0.019533
+        },
+        {
+          "chunk": 7,
+          "ok": true,
+          "error": null,
+          "summary": "The first text reports Governor Gerrit de Heere\u2019s 1697 administrative inspection of Dutch Jaffnapatam: he orders reforms in courts, finances, defenses, supplies, slavery, elephant transport, trade, roads, and public works, emphasizing Company interests and strict discipline.\n\nThe later text recounts Thomas Paine\u2019s imprisonment in Luxembourg prison after his arrest at Passage des Petits P\u00e8res and searches at Britain House and the Faubourg du Nord. James Monroe secured his release; Paine then lived in Monroe\u2019s Paris house, recovered from illness, wrote religious and political works, helped found Theophilanthropy, and later stayed with Nicolas de Bonneville\u2019s family in Paris.",
+          "input_tokens": 96130,
+          "output_tokens": 210,
+          "cost_usd": 0.019478
+        },
+        {
+          "chunk": 8,
+          "ok": true,
+          "error": null,
+          "summary": "The text recounts Thomas Paine\u2019s later life: his scientific inventions, political advocacy, the collapse of French republican hopes, and his residence with the Bonneville family in Paris. He traveled to Belgium, returned to America via Baltimore, visited Washington, Bordentown, New York, Stonington, and New Rochelle, and defended Jefferson, Louisiana\u2019s purchase, abolition, and religious freedom. In America he faced ostracism, poverty, attacks, disfranchisement, and slander, while maintaining his Deist convictions. He died in Greenwich, New York, on June 8, 1809; his remains were buried at New Rochelle and later exhumed by William Cobbett. The text also depicts his inventions, friendships, character, and posthumous influence. A separate concluding novel chapter follows Mr. Smith, secretly wealthy Stanley Fulton, proposing to Miss Maggie, who initially misunderstands his identity.",
+          "input_tokens": 98529,
+          "output_tokens": 241,
+          "cost_usd": 0.002346
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "NOT FOUND",
+        "raw_answer": "NOT FOUND",
+        "correct": false,
+        "input_tokens": 2007,
+        "output_tokens": 29,
+        "cost_usd": 0.000436
+      },
+      "correct": false,
+      "raw_answer": "NOT FOUND",
+      "total_tokens": 773971,
+      "peak_context_tokens": 98529,
+      "cost_usd": 0.122024,
+      "part_a_correct": false,
+      "part_a_real_input_tokens": 765599,
+      "part_a_cost_usd": 0.30702
+    },
+    {
+      "bucket": "768k",
+      "id": 3,
+      "condition": "isolate",
+      "person": "Mary",
+      "target": "hallway",
+      "n_chunks": 8,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96196,
+          "output_tokens": 30,
+          "cost_usd": 0.019275
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "\"My daughter Mary being with us, she also sang to the great satisfaction of both the masters, and a world of people of quality present.\"",
+          "input_tokens": 96174,
+          "output_tokens": 213,
+          "cost_usd": 0.01949
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96045,
+          "output_tokens": 94,
+          "cost_usd": 0.019322
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 95359,
+          "output_tokens": 6,
+          "cost_usd": 0.019079
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96090,
+          "output_tokens": 47,
+          "cost_usd": 0.019274
+        },
+        {
+          "chunk": 6,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96161,
+          "output_tokens": 55,
+          "cost_usd": 0.019298
+        },
+        {
+          "chunk": 7,
+          "ok": true,
+          "error": null,
+          "report": "\"Mary went to the hallway.\"",
+          "input_tokens": 95877,
+          "output_tokens": 43,
+          "cost_usd": 0.019227
+        },
+        {
+          "chunk": 8,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 98280,
+          "output_tokens": 6,
+          "cost_usd": 0.019663
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "hallway",
+        "raw_answer": "hallway",
+        "correct": true,
+        "input_tokens": 693,
+        "output_tokens": 6,
+        "cost_usd": 0.000146
+      },
+      "correct": true,
+      "raw_answer": "hallway",
+      "total_tokens": 771375,
+      "peak_context_tokens": 98280,
+      "cost_usd": 0.154774,
+      "part_a_correct": false,
+      "part_a_real_input_tokens": 765902,
+      "part_a_cost_usd": 0.307154
+    },
+    {
+      "bucket": "768k",
+      "id": 3,
+      "condition": "summary",
+      "person": "Mary",
+      "target": "hallway",
+      "n_chunks": 8,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "Coningsby falls in love with Edith Millbank, but their families\u2019 bitter feud separates them. After refusing his grandfather\u2019s political demands, he is disinherited, enters the Temple, and later wins election to Parliament when Edith\u2019s father unexpectedly supports him. They marry and inherit Hellingsley; Flora later leaves Coningsby her fortune. Meanwhile, Lord Monmouth separates from Lucretia and dies, leaving Flora wealthy. A separate narrative follows pirate Captain Flint, whose gang hides in a crystal cave with Lightfoot, Black Bill, and captive Hellena. Strange groans, yells, and an apparently supernatural Indian haunt the cave. Flint plans further piracy to conceal his identity, while Lightfoot and Black Bill secretly sympathize with Hellena.",
+          "input_tokens": 96210,
+          "output_tokens": 192,
+          "cost_usd": 0.019472
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines three narratives. In the pirate story, Captain Flint\u2019s crimes are exposed, he escapes prison, kills Jones Bradley near the cave, and dies after falling into a ravine. Fire Cloud rescues Hellena and Lightfoot through the cave\u2019s secret passage, while Henry Billings eventually returns to New York and reunites with Hellena. The cave\u2019s \u201csupernatural\u201d noises are explained as echoes manipulated by Black Bill and Fire Cloud.\n\nThe second narrative follows Agricola, Adrienne, and servants moving between a pavilion, hiding place, park, and the Princess Saint-Dizier\u2019s residence.\n\nThe remainder summarizes John Evelyn\u2019s diary: court life, scientific and artistic visits, religious controversy, political repression, the deaths of Charles II and Evelyn\u2019s children, James II\u2019s Catholic policies, William of Orange\u2019s invasion, and the accession of William and Mary.",
+          "input_tokens": 96188,
+          "output_tokens": 261,
+          "cost_usd": 0.019551
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "The text is a vast anthology of historical diaries, memoirs, journalism, advertisements, and ethnological writing. It includes John Evelyn\u2019s detailed observations of seventeenth-century English politics, religion, warfare, weather, society, and travel among London, Wotton, Lambeth, Windsor, Ireland, and other places. Later sections describe Minnesota printers, Civil War battles at Mill Springs and Pittsburg Landing, Lincoln\u2019s assassination, family diaries, journeys from America to England, Scotland, France, and return home. The final essays examine Maya civilization, alleged connections with Egypt, Africa, Asia, and ancient migrations, followed by discussions of American Indian music and medieval European instruments.",
+          "input_tokens": 96059,
+          "output_tokens": 205,
+          "cost_usd": 0.019458
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines a history of medieval and post-medieval musical instruments with a serialized novel. The novel follows Horace Boyce, Reuben Tracy, Jessica Lawton, and the Minster family amid romance, class tensions, industrial exploitation, and financial conspiracy. Tenney and Wendover manipulate Minster investments, while Reuben uncovers their fraud and helps Kate and Ethel challenge it. Horace, morally compromised and rejected by Kate, joins the conspirators. Jessica builds a girls\u2019 resting house, brings her son Horace from Tecumseh, and struggles with renewed feelings and despair. Reuben works from his law office, visits the Minster house and his mother\u2019s farmhouse, while Jessica later enters Horace\u2019s office and drives with Gedney to the farmhouse after learning a mob threatens the Minsters\u2019 home.",
+          "input_tokens": 95373,
+          "output_tokens": 227,
+          "cost_usd": 0.019347
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "summary": "Jessica Lawton reaches Reuben Tracy\u2019s farm, warns him of a mob attacking the Minsters, and travels with him toward Thessaly. She steals incriminating papers from Gedney, then leaves the sleigh and walks through the snow. Reuben pacifies the mob outside the Minster house, while Jessica collapses at General Boyce\u2019s door; Horace learns she has a child and promises to reform.\n\nOther stories follow: Cissy Trixit flees her seized Canada City home through the back way with Ah Fe to find her fugitive father. Masterton pursues Chinese messengers into a snowstorm and is rescued by disguised Cissy. At the Ramierez fonda, a supposedly supernatural attacker is revealed as a trained pinto horse. Miner Bray saves Eugenia from a mountain ledge, and her note leads to a gold strike. Miss Trotter discovers Chris loves her, while Frida marries Bilson. In *Jennie Gerhardt*, Jennie leaves Cleveland with Lester for New York and later Chicago, while secretly arranging care for Vesta.",
+          "input_tokens": 96104,
+          "output_tokens": 265,
+          "cost_usd": 0.019539
+        },
+        {
+          "chunk": 6,
+          "ok": true,
+          "error": null,
+          "summary": "Jennie and Lester\u2019s long relationship collapses under social pressure, inheritance, and Lester\u2019s desire to regain wealth and status. After leaving Jennie in their Hyde Park home, Lester sends her to a cottage in Sandwood, later marries Letty Gerald, and travels abroad. Jennie\u2019s daughter Vesta dies, and Lester eventually sends for Jennie at his room in the Auditorium Hotel before dying there. Jennie attends his funeral and watches his body leave Chicago by train for Cincinnati. Years later, Jennie lives quietly near Jackson Park with adopted children, while Lester\u2019s family and business prosper. The appended theological chapters explain Baptism as regeneration through water and the Holy Spirit, emphasizing its essential matter and words, while distinguishing ceremonies as nonessential. They similarly describe the Eucharist as Christ\u2019s sacramental presence, sacrifice, and spiritual nourishment, and Confirmation as the laying on of hands that completes Baptism.",
+          "input_tokens": 96175,
+          "output_tokens": 273,
+          "cost_usd": 0.019563
+        },
+        {
+          "chunk": 7,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines several works: a theological discussion presents Matrimony, Holy Order, Penance, and Unction as Church sacraments, emphasizing consent, apostolic succession, confession, absolution, and healing. A wartime drama follows the Grelieu family near a broken bridge while floods threaten, as they travel toward Antwerp; wounded civilians and a distressed girl appear, while Emil vows Belgium will survive. In Winton, young people form the S.W.F. Club, explore local places, include Sextoness Jane, and enjoy picnics, photography, boating, and a final outing to an old fort before leaving for school. A history recounts Durham\u2019s Canadian administration and the 1838 rebellion, including battles at Lacolle, Odelltown, Napierville, and Beauharnois. Children\u2019s stories describe Minnie\u2019s mischievous pet monkey Jacko and anecdotes about monkeys and baboons. A Cornish travelogue records journeys through the Lizard, Marazion, Land\u2019s End, St Ives, Tintagel, Boscastle, and Launceston, emphasizing scenery, caves, churches, shipwrecks, and local people. Finally, newlyweds Cameron and Mandy travel from Big Horn Ranch to the Little Horn for fishing, rescue an injured Piegan boy, and encounter his tribe while returning home.",
+          "input_tokens": 95891,
+          "output_tokens": 374,
+          "cost_usd": 0.019627
+        },
+        {
+          "chunk": 8,
+          "ok": true,
+          "error": null,
+          "summary": "Mandy rescues Chief Onawata\u2019s injured son, unaware he is the Sioux agitator Copperhead. Cameron and Inspector Dickson fail to arrest him at the Piegan camp, but later pursue him through Calgary, the Sarcee camp, Sun Dance Canyon, and the Ghost River country. During growing rebellion, Mandy, Cameron, Jerry, Dr. Martin, and loyal Indians repeatedly thwart Copperhead\u2019s plans. Outlaw Raven saves Moira and diverts a cattle stampede, dying nobly; Dr. Martin and Moira eventually confess their love. Cameron finally captures Copperhead after escaping imprisonment at his camp. The North-West Mounted Police suppress the rebellion, aided by Crowfoot\u2019s loyalty. Cameron\u2019s service is honored, while Smith\u2019s kindness rebuilds the ranch. An appended diary recounts post-Civil-War news about Lincoln, Booth, Davis, and local life.",
+          "input_tokens": 98294,
+          "output_tokens": 267,
+          "cost_usd": 0.019979
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "NOT FOUND",
+        "raw_answer": "NOT FOUND",
+        "correct": false,
+        "input_tokens": 2093,
+        "output_tokens": 95,
+        "cost_usd": 0.000533
+      },
+      "correct": false,
+      "raw_answer": "NOT FOUND",
+      "total_tokens": 774546,
+      "peak_context_tokens": 98294,
+      "cost_usd": 0.157069,
+      "part_a_correct": false,
+      "part_a_real_input_tokens": 765902,
+      "part_a_cost_usd": 0.307154
+    },
+    {
+      "bucket": "768k",
+      "id": 4,
+      "condition": "isolate",
+      "person": "John",
+      "target": "bedroom",
+      "n_chunks": 8,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "In answer to a telegram from Secretary Stanton, Pope came to Washington in June, 1862.",
+          "input_tokens": 96087,
+          "output_tokens": 180,
+          "cost_usd": 0.019433
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96089,
+          "output_tokens": 84,
+          "cost_usd": 0.019319
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96287,
+          "output_tokens": 107,
+          "cost_usd": 0.019386
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "report": "\"John journeyed to the hallway.\"",
+          "input_tokens": 96281,
+          "output_tokens": 67,
+          "cost_usd": 0.019337
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96116,
+          "output_tokens": 93,
+          "cost_usd": 0.019335
+        },
+        {
+          "chunk": 6,
+          "ok": true,
+          "error": null,
+          "report": "\"John Evangelist Borzinski was a physician in the convent of the Brothers of Mercy at Prague.\"",
+          "input_tokens": 96318,
+          "output_tokens": 91,
+          "cost_usd": 0.019373
+        },
+        {
+          "chunk": 7,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96337,
+          "output_tokens": 6,
+          "cost_usd": 0.019275
+        },
+        {
+          "chunk": 8,
+          "ok": true,
+          "error": null,
+          "report": "John journeyed to the bedroom.",
+          "input_tokens": 97559,
+          "output_tokens": 11,
+          "cost_usd": 0.019525
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "bedroom",
+        "raw_answer": "bedroom",
+        "correct": true,
+        "input_tokens": 707,
+        "output_tokens": 6,
+        "cost_usd": 0.000149
+      },
+      "correct": true,
+      "raw_answer": "bedroom",
+      "total_tokens": 772426,
+      "peak_context_tokens": 97559,
+      "cost_usd": 0.155132,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 766795,
+      "part_a_cost_usd": 0.307196
+    },
+    {
+      "bucket": "768k",
+      "id": 4,
+      "condition": "summary",
+      "person": "John",
+      "target": "bedroom",
+      "n_chunks": 8,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The text surveys Civil War campaigns from Shiloh through Chattanooga. It describes Confederate attacks at Shiloh, gunboat intervention, Memphis\u2019s capture, naval warfare, and the Andrews raid. It then follows McClellan\u2019s Peninsula Campaign, battles at Fair Oaks, the Shenandoah Valley operations, the Seven Days\u2019 retreat to Harrison\u2019s Landing, Pope\u2019s defeats at Cedar Mountain and Second Bull Run, and Lee\u2019s invasion ending at Antietam. Further sections recount Fredericksburg, Chancellorsville and Jackson\u2019s wounding, Grant\u2019s Vicksburg campaign and Port Hudson\u2019s fall, Gettysburg and Pickett\u2019s Charge, Chickamauga, and the Union relief of Chattanooga. Across these campaigns, armies repeatedly moved through Richmond, the Chickahominy, Virginia\u2019s valleys, Maryland, Mississippi, Tennessee, and Pennsylvania, while strategic victories at Gettysburg and Vicksburg shifted momentum toward the Union.",
+          "input_tokens": 96101,
+          "output_tokens": 226,
+          "cost_usd": 0.019491
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "The text recounts major Civil War campaigns. Grant\u2019s forces defeated Bragg at Chattanooga, capturing Lookout Mountain and Missionary Ridge. In 1864, Grant crossed the Rapidan into the Wilderness, then fought Lee at Spotsylvania, North Anna, and Cold Harbor before shifting toward Petersburg. Sherman advanced from Chattanooga through Georgia, forcing Johnston southward, capturing Atlanta, and marching from Atlanta to Savannah, where Fort McAllister fell. He later moved through the Carolinas, capturing Columbia and defeating Johnston at Bentonville. Sheridan defeated Early in the Shenandoah Valley at Winchester, Fisher\u2019s Hill, and Cedar Creek. Thomas destroyed Hood\u2019s army at Nashville. Grant\u2019s forces broke through Petersburg, compelling Lee to evacuate Richmond and retreat westward. Lee surrendered to Grant at Appomattox on April 9, 1865, and the Confederacy soon collapsed.\n\nThe text then shifts to a social novel about impoverished workers in Mugsborough. Their low wages, unemployment, exploitation, religious hypocrisy, and poor living conditions are depicted through disputes over municipal wages, dishonest contracting, and a workers\u2019 outing. By June, employment improves, though hardship continues. Ruth Easton suffers privately, while families struggle with poverty, illness, and inadequate food. Workers organize a \u201cBeano\u201d outing, debating its destination and duration.",
+          "input_tokens": 96103,
+          "output_tokens": 333,
+          "cost_usd": 0.01962
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "Workers endure brutal hours, poverty, unsafe conditions, wage cuts, surveillance, scamming, and dismissal at Rushton & Co. They move between building jobs, the yard, pubs, and the Wage Slave Market, while employers steal materials and enforce servility. Socialists campaign at Windley\u2019s Cross Roads, face violent opposition, and Barrington delivers an oration at the Imperial Banquet Hall (\u201cThe Refuge\u201d). Philpot dies when the unsafe \u201cSixty-five\u201d ladder collapses; his employers exploit the funeral and move his body between coffins before burying him at the cemetery. Election crowds later fight over Sweater and D\u2019Encloseland, despite shared poverty. Finally, Ruth gives birth, flees her home with her baby, seeks refuge at Owen\u2019s house, and moves into Frankie\u2019s former playroom while Easton takes their older child.",
+          "input_tokens": 96301,
+          "output_tokens": 279,
+          "cost_usd": 0.019595
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "summary": "Owen reconciles with Easton and helps secure Ruth\u2019s return, while poverty, unemployment, and harsh labor conditions continue. After confronting Rushton over Bert White\u2019s freezing workplace, Owen receives further work. Hunter dies by suicide, exposing the human cost of exploitation. Barrington finds employment helping Santa Claus, gives local children gifts, and donates money to Owen\u2019s family. He leaves for Christmas after writing Owen a letter. The family watches his train cross the bridge from their window. Meanwhile, Frank and Barney travel through Tennessee mountains, stay at Kate Kenyon\u2019s cabin, are captured by Black Caps, and nearly hanged beneath a tree. Muriel rescues them, later revealed as Kate in disguise. Kate helps them escape through a cave to an abandoned mill, where they meet her fugitive brother Rufe. She and Muriel defeat Wade Miller, enabling the boys to depart safely. The appendix examines railroad disasters, emphasizing weak systems, inadequate brakes, poor signaling, and the superiority of automatic brakes and interlocking systems.",
+          "input_tokens": 96295,
+          "output_tokens": 250,
+          "cost_usd": 0.019559
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines several works: railway-safety statistics comparing Britain and America; Ruskin\u2019s reflections on architecture, ornament, nature, art, Venice, and religion; Elsie Inglis\u2019s leadership of the Scottish Women\u2019s Hospitals in France, Serbia, Russia, and Romania, her wartime service, illness, return, and death in Newcastle; and a historical account of the Goa Inquisition, including Dellon\u2019s imprisonment, transfer to Goa, trials, torture, and eventual release. It also describes Buchanan\u2019s visit to the Goa Inquisition, where he was shown administrative rooms but refused access to the dungeons and prisoners.",
+          "input_tokens": 96130,
+          "output_tokens": 229,
+          "cost_usd": 0.019501
+        },
+        {
+          "chunk": 6,
+          "ok": true,
+          "error": null,
+          "summary": "The text recounts alleged Inquisition atrocities: Count Della Torre is seized at his house, imprisoned in St. Luke\u2019s cell, tortured, and dies; his counsellor-friend flees Italy through Loretto, Switzerland, Douay, Calais, and Dover. Other accounts describe torture, convent imprisonment, persecution, and escapes, including Florencia d\u2019Romani\u2019s flight from a Naples convent aboard an American ship to London. It denounces Roman Catholic persecution and warns America against Jesuit influence. The latter portion shifts to Evelyn\u2019s diary, describing English political and religious turmoil under James II, Protestant persecution in France, William of Orange\u2019s invasion, the Glorious Revolution, and subsequent events through the 1690s.",
+          "input_tokens": 96332,
+          "output_tokens": 212,
+          "cost_usd": 0.019521
+        },
+        {
+          "chunk": 7,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines John Evelyn\u2019s diary (1694\u20131705) with medical treatises. Evelyn records moving from Sayes Court to Wotton, later returning to London and Dover Street; the Czar of Muscovy occupied his house at Sayes Court. He helped establish Greenwich Hospital, laid its foundation stone, and later resigned as treasurer. The diary describes political events, wars, epidemics, deaths, financial crises, religious controversies, weather, family losses, and Evelyn\u2019s declining health.\n\nThe medical sections discuss membranous enteritis, dysentery, typhlitis, intestinal ulcers, bowel hemorrhage, and intestinal obstruction. They cover historical theories, causes, symptoms, pathology, complications, diagnosis, prognosis, prevention, diet, medication, irrigation, opium, ipecacuanha, and surgery. Dysentery is linked chiefly to intestinal inflammation, contaminated food or water, sanitation, climate, and possible infection; obstruction may require urgent laparotomy.",
+          "input_tokens": 96351,
+          "output_tokens": 290,
+          "cost_usd": 0.019618
+        },
+        {
+          "chunk": 8,
+          "ok": true,
+          "error": null,
+          "summary": "The text reviews intestinal cancer, lardaceous degeneration, and extensive rectal/anal diseases, including prolapse, polyps, hemorrhoids, strictures, proctitis, fissures, ulcers, abscesses, fistulas, syphilis, tuberculosis, malignancy, neurological dysfunction, and their historical treatments. It then surveys intestinal parasites\u2014tapeworms, flukes, nematodes, trichinae, and filariae\u2014their life cycles, symptoms, treatment, and prevention. Finally, it introduces liver disorders, discussing biliousness, lithaemia, glycosuria, jaundice, hepatic congestion, perihepatitis, and cirrhosis. John journeyed to the bedroom.",
+          "input_tokens": 97573,
+          "output_tokens": 204,
+          "cost_usd": 0.019759
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "bedroom",
+        "raw_answer": "bedroom",
+        "correct": true,
+        "input_tokens": 2071,
+        "output_tokens": 28,
+        "cost_usd": 0.000448
+      },
+      "correct": true,
+      "raw_answer": "bedroom",
+      "total_tokens": 775308,
+      "peak_context_tokens": 97573,
+      "cost_usd": 0.157112,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 766795,
+      "part_a_cost_usd": 0.307196
+    },
+    {
+      "bucket": "768k",
+      "id": 5,
+      "condition": "isolate",
+      "person": "Sandra",
+      "target": "bathroom",
+      "n_chunks": 8,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 95339,
+          "output_tokens": 33,
+          "cost_usd": 0.019107
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "report": "Sandra moved to the kitchen.",
+          "input_tokens": 95493,
+          "output_tokens": 48,
+          "cost_usd": 0.019156
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 96015,
+          "output_tokens": 27,
+          "cost_usd": 0.019235
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "report": "Sandra went back to the bathroom.",
+          "input_tokens": 96043,
+          "output_tokens": 69,
+          "cost_usd": 0.019291
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 95971,
+          "output_tokens": 28,
+          "cost_usd": 0.019228
+        },
+        {
+          "chunk": 6,
+          "ok": true,
+          "error": null,
+          "report": "\u201cSandra travelled to the hallway.\u201d\n\n\u201cSandra travelled to the bathroom.\u201d",
+          "input_tokens": 95963,
+          "output_tokens": 107,
+          "cost_usd": 0.019321
+        },
+        {
+          "chunk": 7,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 95902,
+          "output_tokens": 32,
+          "cost_usd": 0.019219
+        },
+        {
+          "chunk": 8,
+          "ok": true,
+          "error": null,
+          "report": "NOT FOUND",
+          "input_tokens": 98806,
+          "output_tokens": 31,
+          "cost_usd": 0.019798
+        }
+      ],
+      "lead": {
+        "ok": true,
+        "error": null,
+        "answer_text": "bathroom",
+        "raw_answer": "bathroom",
+        "correct": true,
+        "input_tokens": 681,
+        "output_tokens": 6,
+        "cost_usd": 0.000143
+      },
+      "correct": true,
+      "raw_answer": "bathroom",
+      "total_tokens": 770594,
+      "peak_context_tokens": 98806,
+      "cost_usd": 0.154498,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 765254,
+      "part_a_cost_usd": 0.306535
+    },
+    {
+      "bucket": "768k",
+      "id": 5,
+      "condition": "summary",
+      "person": "Sandra",
+      "target": "bathroom",
+      "n_chunks": 8,
+      "chunks": [
+        {
+          "chunk": 1,
+          "ok": true,
+          "error": null,
+          "summary": "The text discusses tuberculous and cancerous peritonitis, ascites, infantile peritonitis, and tabes mesenterica. Tuberculous peritonitis is difficult to diagnose early, may occur without cough despite severe pulmonary disease, and causes tubercular deposits, fibrosis, adhesions, intestinal compression, and usually death. The author describes visiting a twenty-one-year-old woman, daughter of a prominent Vermont gentleman, whose abdominal symptoms concealed a large right-lung cavity. Another patient was at her family\u2019s country home, then moved to her city home, where repeated tapping relieved pain but ultimately failed; she died from intestinal obstruction. Cancerous peritonitis progresses over months, produces viscous, albumin-rich ascites, low fever, nodules, ovarian scirrhus, and obstruction. Ascites commonly results from portal obstruction, liver disease, cancer, renal disease, or peritonitis; diagnosis relies on shifting dullness and fluid-wave examination. Tabes mesenterica is tuberculosis of mesenteric glands, especially in children, causing emaciation, anemia, digestive disturbance, abdominal distension, fever, and often death. Prevention and palliation emphasize hygiene, nutrition, treating intestinal irritation, cod-liver oil, iron, and symptom relief.",
+          "input_tokens": 95353,
+          "output_tokens": 318,
+          "cost_usd": 0.019452
+        },
+        {
+          "chunk": 2,
+          "ok": true,
+          "error": null,
+          "summary": "The text first presents an extensive alphabetical medical index covering diseases, symptoms, pathology, diagnosis, prognosis, and treatments, especially digestive, hepatic, pancreatic, rheumatic, pharyngeal, rectal, and gastric disorders. It then shifts to Thomas Paine\u2019s political and religious life: his defense of reason, criticism of biblical authority, founding of Theophilanthropy in Paris, advocacy of agrarian justice and neutral commerce, and opposition to Britain and Napoleon\u2019s authoritarianism. Paine lived among the Bonnevilles in Paris, visited Belgium and Bruges, corresponded with Jefferson, and planned repeatedly to return to America. The account also describes his inventions, poverty, declining health, and friendships before his eventual departure from Europe.",
+          "input_tokens": 95507,
+          "output_tokens": 212,
+          "cost_usd": 0.019356
+        },
+        {
+          "chunk": 3,
+          "ok": true,
+          "error": null,
+          "summary": "Thomas Paine returned from France to America in 1802, landing at Baltimore, visiting Washington, Philadelphia, New York, Bordentown, and New Rochelle. Despite Jefferson\u2019s friendship, religious persecution, political hostility, poverty, illness, and false accusations\u2014including disfranchisement and slander\u2014he continued writing on democracy, deism, slavery, Louisiana, and international peace. He died in Greenwich, New York, in 1809 and was buried at New Rochelle; his bones were later exhumed and taken to England.\n\nA separate narrative follows Allan Cameron and Mandy, who travel near the Piegan Reserve, rescue an injured Indian youth, and meet his father, Chief Onawata. Cameron is recruited by the Mounted Police to capture the dangerous \u201cCopperhead.\u201d After failing to arrest him at the Piegan camp, Cameron returns to find his ranch burning, while Mandy and a helper fight the fire. They later travel toward Calgary, where Cameron meets his friend Dr. Martin and prepares for the dangerous mission.",
+          "input_tokens": 96029,
+          "output_tokens": 243,
+          "cost_usd": 0.019497
+        },
+        {
+          "chunk": 4,
+          "ok": true,
+          "error": null,
+          "summary": "Cameron captures Copperhead after pursuing Indian conspiracies through Calgary, the Sun Dance Canyon, and the Ghost River Trail. His wife Mandy nurses an injured Piegan boy, while Moira and Dr. Martin join the struggle. Outlaw Raven saves Moira and dies stopping a cattle stampede, proving his loyalty. Cameron\u2019s patrol helps prevent Blackfoot rebellion during the 1885 uprising, and he later marries Moira\u2019s devoted doctor. Meanwhile, the Rover boys travel from Boma into the Congo, are ambushed and imprisoned by Captain Villaire and Baxter at an abandoned fort, then escape with help from Cujo and Aleck. They release Baxter and continue inland toward King Susko, surviving jungle dangers, snakes, and a violent hurricane.",
+          "input_tokens": 96057,
+          "output_tokens": 234,
+          "cost_usd": 0.019492
+        },
+        {
+          "chunk": 5,
+          "ok": true,
+          "error": null,
+          "summary": "The Rover boys survive a hurricane, discover King Susko\u2019s gold mountain, rescue their imprisoned father from a cave village, and return home, while Crabtree is exposed and expelled. In a separate romance, Burt wins Gertrude, and Webb\u2019s patient devotion awakens Amy\u2019s love. In another mystery, Cyril hides Anita, suspected in Lord Wilmersley\u2019s murder, while detectives uncover Valdriguez\u2019s tragic past; the truth reveals Anita witnessed the crime and Valdriguez\u2019s son may live. Finally, Reuben Tracy travels to the Minster house, calms a threatening mob, and earns the family\u2019s gratitude, while legal disputes are settled without prosecution.",
+          "input_tokens": 95985,
+          "output_tokens": 184,
+          "cost_usd": 0.019418
+        },
+        {
+          "chunk": 6,
+          "ok": true,
+          "error": null,
+          "summary": "The text interweaves several narratives. Reuben Tracy wins Mrs. Nobody\u2019s support for opening the furnaces, then leaves her home elated. General Boyce finds Jessica collapsed at his front door and carries her into the hall; she later lies dying in his bed, reconciles Horace and Tracy, and asks them to protect her son. Interspersed theological lectures discuss the Church, Bible, Prayer Book, Sacraments, Baptism, Confirmation, Marriage, Holy Orders, Penance, and Unction.\n\nA separate novel follows Amy Clifford\u2019s growing love of nature and complicated relationships with Burt and Webb. Amy visits the grove, garden, rose garden, apiary, and mountains; Webb quietly loves her while Burt courts her and Miss Hargrove. The family camps in the mountains, fights a forest fire, observes wildlife, and shares rural work, storms, harvests, and domestic life.",
+          "input_tokens": 95977,
+          "output_tokens": 270,
+          "cost_usd": 0.019519
+        },
+        {
+          "chunk": 7,
+          "ok": true,
+          "error": null,
+          "summary": "The text combines several works. In a mountain novel, Burt saves Gertrude from a rattlesnake; their feelings develop despite his prior promise to Amy. Amy releases him, and Burt visits Gertrude\u2019s father before confessing his love. Gertrude accepts him. Webb later reveals his long love for Amy, who reciprocates. The families celebrate Christmas, help Lumley\u2019s household, and comfort the lonely Mr. Alvord.\n\nDante\u2019s *Inferno* concludes with the travelers descending past Lucifer and climbing through a rocky passage until they emerge beneath the stars.\n\nIn *Dandy Dick*, Dean Jedd is arrested after secretly attempting to medicate a racehorse. Hannah frees him from the police cell, but he is recaptured and later rescued. The household\u2019s deceptions are exposed, though marriages and reconciliations follow.\n\nEducational chapters warn against alcohol, tobacco, and narcotics, explaining nutrition, digestion, circulation, respiration, skin, senses, and bodily strength.",
+          "input_tokens": 95916,
+          "output_tokens": 264,
+          "cost_usd": 0.0195
+        },
+        {
+          "chunk": 8,
+          "ok": true,
+          "error": null,
+          "summary": "The excerpt concludes Scott\u2019s *The Lady of the Lake*: Fitz-James travels through the Trosachs, defeats Roderick Dhu at Coilantogle Ford, and reaches Stirling, where Ellen petitions King James, who pardons Douglas and permits Malcolm and Ellen\u2019s union. Roderick dies after the battle of Beal\u2019 an Duine. The text then shifts to histories and memoirs: the Sioux Uprising in Minnesota, pioneer St. Paul fires and theaters, Civil War battles at Mill Springs and Pittsburg Landing, and the British assault on Lucknow. Soldiers move through Fort Ridgely, New Ulm, Mankato, Bareilly, the Begum\u2019s Kothee, and other Indian locations.",
+          "input_tokens": 98820,
+          "output_tokens": 220,
+          "cost_usd": 0.020028
+        }
+      ],
+      "reask": {
+        "ok": true,
+        "error": null,
+        "answer_text": "NOT FOUND",
+        "raw_answer": "NOT FOUND",
+        "correct": false,
+        "input_tokens": 2044,
+        "output_tokens": 30,
+        "cost_usd": 0.000445
+      },
+      "correct": false,
+      "raw_answer": "NOT FOUND",
+      "total_tokens": 773663,
+      "peak_context_tokens": 98820,
+      "cost_usd": 0.156707,
+      "part_a_correct": true,
+      "part_a_real_input_tokens": 765254,
+      "part_a_cost_usd": 0.306535
+    }
+  ],
+  "n_errors": 0,
+  "errors": [],
+  "budget": {
+    "max_usd": null,
+    "completed_spend_usd": 2.951742,
+    "n_calls": 188
+  }
+}
