@@ -54,7 +54,9 @@ Runs three separate `pi` sessions where the agent must keep a `decisions.md` mem
 ```bash
 python3 part_c_memory.py --model openai/gpt-5.6-luna --team <team>
 ```
-Writes: `summary.md` and `results.json`.
+Writes: `summary.md` and `part_c.json`.
+
+While Part C currently generates `summary.md` and `part_c.json`, an existing `results.json` is also accepted, so you do not need to copy, rename, or rerun your script to match the filename.
 
 *Note:* All part outputs land under `studio/studio-02/submission/<team>/evidence/part_a/`, `part_b/`, and `part_c/` respectively.
 
