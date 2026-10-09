@@ -38,3 +38,12 @@ Build one minimal OpenAI Responses loop on your laptop, then compare a direct/Re
 * [studio-03/instruction/Studio_Instruction.md](studio-03/instruction/Studio_Instruction.md) (assignment and evidence requirements)
 * [studio-03/instruction/code/](studio-03/instruction/code/) (setup, official CLI, and fixed question)
 * [studio-03/submission/](studio-03/submission/) (one-file template and team submissions)
+
+## Studio 05: Build a Tool Server
+
+Build an MCP server over local data you own, connect it to an agent in Codex with gpt-5.6-luna, make sure your code stops "delete all data", and measure how reliably the agent uses your tools. There is no starter code.
+
+* [studio-05/README.md](studio-05/README.md) (overview)
+* [studio-05/instruction/Studio_Instruction.md](studio-05/instruction/Studio_Instruction.md) (assignment, checkpoints and evidence)
+* [studio-05/instruction/GRADING_RUBRIC.md](studio-05/instruction/GRADING_RUBRIC.md) (how it's graded, 10 points)
+* [studio-05/submission/](studio-05/submission/) (template and your team's folder in your private repo)
