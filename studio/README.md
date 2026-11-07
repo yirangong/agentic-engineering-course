@@ -58,3 +58,13 @@ Build a deep research agent with at least five sub-agents searching in parallel.
 * [studio-06/instruction/EVALUATION.md](studio-06/instruction/EVALUATION.md) (evaluation commands)
 * [studio-06/instruction/GRADING_RUBRIC.md](studio-06/instruction/GRADING_RUBRIC.md) (8+2 points)
 * [studio-06/submission/](studio-06/submission/) (template and your team's private submission folder)
+
+## Studio 09: Build Your Eval
+
+Evaluate the deep research system you built in Studio 06. Write 10 research questions, each with one known answer. Run each question five times in Harbor. Grade every run with one judge call, then report pass@1 and pass^5. The questions, the answers and your agent file are yours. The judge and its rubric are fixed.
+
+* [studio-09/README.md](studio-09/README.md) (overview)
+* [studio-09/instruction/Studio_Instruction.md](studio-09/instruction/Studio_Instruction.md) (assignment, checkpoints and evidence)
+* [studio-09/instruction/GRADING_RUBRIC.md](studio-09/instruction/GRADING_RUBRIC.md) (how it's graded, 10 points)
+* [studio-09/instruction/code/](studio-09/instruction/code/) (starter kit: task template, judge, scripts)
+* [studio-09/submission/](studio-09/submission/) (template and your team's folder in your private repo)
